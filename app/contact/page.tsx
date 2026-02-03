@@ -152,7 +152,7 @@ export default function ContactPage() {
                   },
                   {
                     title: 'Lokasi Strategis',
-                    description: 'Mudah diakses dengan area parkir yang luas dan nyaman',
+                    description: 'Dapat di liat di maps',
                   },
                 ].map((item, idx) => (
                   <Card key={idx} className="border-border">
