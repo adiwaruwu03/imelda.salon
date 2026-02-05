@@ -8,7 +8,7 @@ const albums = [
   {
     src: '/album/Programer.jpg',
     title: 'owner ',
-    desc: 'MELDA PASARIBU',
+    desc: 'Adi Waruwu',
   },
   {
     src: '/album/founder.jpg',
