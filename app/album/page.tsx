@@ -7,12 +7,12 @@ import { Card, CardContent } from '@/components/ui/card'
 const albums = [
   {
     src: '/album/Programer.jpg',
-    title: 'Adi Waruwu',
-    
+    title: 'Programer ',
+    desc: 'Adi Waruwu',
   },
   {
     src: '/album/founder.jpg',
-    title: 'owner ',
+    title: 'Owner ',
     desc: 'Melda Pasaribu',
   },
 {
