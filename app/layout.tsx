@@ -8,16 +8,45 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "IMELDA SALON",
+  // ✅ TITLE SEO LOKAL KUAT
+  title: "Imelda Salon Tarutung | Salon & Makeup Artist Garoga Tapanuli Utara",
+
+  // ✅ DESCRIPTION SEO LOKAL
   description:
-    "Imelda Salon adalah salon kecantikan profesional di Garoga, Tapanuli Utara yang menyediakan layanan perawatan rambut, makeup artist (MUA), rias pengantin, hair styling, dan kecantikan wanita. Melayani pelanggan dari Tarutung, Garoga, dan sekitarnya dengan hasil riasan elegan, pelayanan ramah, serta harga terjangkau untuk setiap momen spesial Anda.",
+    "Imelda Salon adalah salon kecantikan profesional di Garoga, Tarutung, Tapanuli Utara yang menyediakan layanan perawatan rambut, makeup artist (MUA), rias pengantin, hair styling, dan kecantikan wanita. Melayani pelanggan Tarutung dan sekitarnya dengan hasil riasan elegan, pelayanan ramah, dan harga terjangkau.",
 
-  generator: "v0.app",
+  // ✅ KEYWORDS
+  keywords: [
+    "Salon Tarutung",
+    "Salon Garoga",
+    "Salon Tapanuli Utara",
+    "Makeup Artist Tarutung",
+    "Rias Pengantin Tarutung",
+    "Salon Kecantikan Tarutung",
+  ],
 
-  // ✅ GOOGLE VERIFICATION (AMAN, TANPA UBAH FONT)
+  // ✅ CANONICAL URL
+  alternates: {
+    canonical: "https://imelda-salon.vercel.app",
+  },
+
+  // ✅ OPEN GRAPH (SEO + SHARE FB/WA)
+  openGraph: {
+    title: "Imelda Salon Tarutung | Salon & Makeup Artist Garoga",
+    description:
+      "Salon kecantikan profesional di Garoga & Tarutung. Layanan rambut, makeup artist, dan rias pengantin.",
+    url: "https://imelda-salon.vercel.app",
+    siteName: "Imelda Salon",
+    locale: "id_ID",
+    type: "website",
+  },
+
+  // ✅ GOOGLE VERIFICATION (PUNYA KAMU)
   verification: {
     google: "EojTxLlWahNp6ERDt2i6uBGbyQxDm0tH4O1voWlgT4k",
   },
+
+  generator: "Next.js",
 
   icons: {
     icon: [
@@ -44,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className="font-sans antialiased">
         {children}
         <Analytics />
