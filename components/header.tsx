@@ -9,10 +9,9 @@ export function Header() {
 
   const navItems = [
     { label: 'Beranda', href: '/' },
-    { label: 'Layanan', href: '/services' },
+    { label: 'Layanan', href: '/layanan' },
     { label: 'Booking', href: '/booking' },
     { label: 'Kontak', href: '/contact' },
-    { label: 'Album', href: '/album' },
   ]
 
   return (
