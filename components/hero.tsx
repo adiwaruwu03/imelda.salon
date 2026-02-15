@@ -31,7 +31,8 @@ export function Hero() {
   style={{
     backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E")`
   }}
-/><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+/>
+<div className="absolute inset-0"> <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Salon background" className="h-full w-full object-cover" /> <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80" /> </div><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           
           {/* Premium Badge */}
@@ -53,49 +54,67 @@ export function Hero() {
           </h1>
 
           {/* Decorative Divider */}
-          <div className="flex items-center justify-center gap-2 animate-fade-up animation-delay-200">
-            <div className="h-0.5 w-12 bg-primary/30 rounded-full" />
-            <Heart className="h-4 w-4 text-primary/60 fill-primary/20 animate-pulse" />
-            <div className="h-0.5 w-12 bg-primary/30 rounded-full" />
-          </div>
+{/* Decorative Divider */}
+<div className="flex items-center justify-center gap-2 animate-fade-up animation-delay-200">
+  <div className="h-0.5 w-12 bg-white/40 rounded-full" />
+  <Heart className="h-4 w-4 text-white/80 fill-white/40 animate-pulse" />
+  <div className="h-0.5 w-12 bg-white/40 rounded-full" />
+</div>
 
-          {/* Description with Enhanced Typography */}
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto animate-fade-up animation-delay-400">
-            <span className="relative inline-block">
-              <span className="relative z-10">
-                Imelda Salon hadir sebagai solusi layanan kecantikan profesional
-                di <span className="font-semibold text-foreground">Tarutung</span> yang berfokus pada kualitas, kenyamanan, dan kepuasan
-                pelanggan di setiap momen spesial.
-              </span>
-            </span>
-          </p>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 animate-fade-up animation-delay-600">
-            <div className="flex items-center gap-2 group">
-              <div className="h-2 w-2 rounded-full bg-green-500 group-hover:scale-125 transition-transform" />
-              <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors"> Client Puas</span>
-            </div>
-            <div className="flex items-center gap-2 group">
-              <div className="h-2 w-2 rounded-full bg-green-500 group-hover:scale-125 transition-transform" />
-              <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Stylist Profesional</span>
-            </div>
-            <div className="flex items-center gap-2 group">
-              <div className="h-2 w-2 rounded-full bg-green-500 group-hover:scale-125 transition-transform" />
-              <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">5+ Tahun Pengalaman</span>
-            </div>
-          </div>
+{/* Description */}
+<p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto animate-fade-up animation-delay-400">
+  <span className="relative inline-block">
+    <span className="relative z-10">
+      Imelda Salon hadir sebagai solusi layanan kecantikan profesional
+      di <span className="font-semibold text-white">Tarutung</span> yang berfokus pada kualitas, kenyamanan, dan kepuasan
+      pelanggan di setiap momen spesial.
+    </span>
+  </span>
+</p>
 
-          {/* Rating Badge */}
-          <div className="inline-flex items-center gap-3 bg-white/50 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-border/50 animate-fade-up animation-delay-800">
-            <div className="flex items-center gap-1">
-              {[1,2,3,4,5].map((star) => (
-                <Star key={star} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-              ))}
-            </div>
-            <span className="text-sm font-medium text-foreground">5.0</span>
-            <span className="text-xs text-muted-foreground">(500+ ulasan)</span>
-          </div>
+
+{/* Trust Indicators */}
+<div className="flex flex-wrap items-center justify-center gap-4 pt-4 animate-fade-up animation-delay-600">
+
+  <div className="flex items-center gap-2 group">
+    <div className="h-2 w-2 rounded-full bg-green-400 group-hover:scale-125 transition-transform" />
+    <span className="text-sm text-white/80 group-hover:text-white transition-colors">
+      Client Puas
+    </span>
+  </div>
+
+  <div className="flex items-center gap-2 group">
+    <div className="h-2 w-2 rounded-full bg-green-400 group-hover:scale-125 transition-transform" />
+    <span className="text-sm text-white/80 group-hover:text-white transition-colors">
+      Stylist Profesional
+    </span>
+  </div>
+
+  <div className="flex items-center gap-2 group">
+    <div className="h-2 w-2 rounded-full bg-green-400 group-hover:scale-125 transition-transform" />
+    <span className="text-sm text-white/80 group-hover:text-white transition-colors">
+      5+ Tahun Pengalaman
+    </span>
+  </div>
+
+</div>
+
+
+{/* Rating Badge */}
+<div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-white/20 animate-fade-up animation-delay-800">
+  
+  <div className="flex items-center gap-1">
+    {[1,2,3,4,5].map((star) => (
+      <Star key={star} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+    ))}
+  </div>
+
+  <span className="text-sm font-medium text-white">5.0</span>
+  <span className="text-xs text-white/70">(500+ ulasan)</span>
+
+</div>
+
         </div>
       </div>
 

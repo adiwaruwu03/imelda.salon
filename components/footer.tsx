@@ -24,7 +24,7 @@ export function Footer() {
             <h4 className="font-semibold text-lg">Menu Cepat</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
-                <Link href="/services" className="hover:text-primary-foreground transition-colors">
+                <Link href="/layanan" className="hover:text-primary-foreground transition-colors">
                   Layanan & Harga
                 </Link>
               </li>

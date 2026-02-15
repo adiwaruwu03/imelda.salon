@@ -270,16 +270,7 @@ export function FeaturedServices() {
                     Digital Marketing
                   </span>
                 </div>
-              </div>
-
-              {/* Right Icon */}
-              <div className="flex-shrink-0">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                  <div className="relative h-24 w-24 lg:h-32 lg:w-32 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white shadow-2xl group-hover:scale-110 transition-all duration-500">
-                    <Code className="h-12 w-12 lg:h-16 lg:w-16 group-hover:rotate-12 transition-transform duration-500" />
-                  </div>
-                </div>
+                
               </div>
             </div>
 

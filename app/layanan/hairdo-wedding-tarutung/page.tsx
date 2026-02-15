@@ -79,7 +79,7 @@ export default function HairdoWeddingPage() {
                 Hairdo Wedding
               </span>
               <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">
-                Tarutung Profesional
+                Tarutung
               </span>
             </h1>
 
@@ -233,115 +233,142 @@ export default function HairdoWeddingPage() {
         </div>
       </section>
 
-      {/* ================= JENIS HAIRDO SECTION ================= */}
-      <section id="jenis-hairdo" className="py-20 sm:py-24 bg-gradient-to-b from-secondary/30 via-secondary/20 to-background relative overflow-hidden">
-        {/* Background Decoration */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-primary/5 to-transparent" />
-        </div>
+{/* ================= JENIS HAIRDO SECTION ================= */}
+<section
+  id="jenis-hairdo"
+  className="py-20 sm:py-24 bg-gradient-to-b from-secondary/30 via-secondary/20 to-background relative overflow-hidden"
+>
+  {/* Background Decoration */}
+  <div className="absolute inset-0 -z-10">
+    <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-primary/5 to-transparent" />
+  </div>
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-12">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
-              <span>💕</span>
-              Pilihan Lengkap
+  <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+    {/* Heading */}
+    <div className="text-center space-y-4 mb-12">
+      <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+        <span>💕</span>
+        Pilihan Lengkap
+      </span>
+
+      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        Jenis Hairdo Wedding
+      </h2>
+
+      <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Tampil memukau di hari spesial dengan berbagai pilihan tatanan rambut
+      </p>
+    </div>
+
+
+    {/* Card Grid */}
+    <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+      {[
+        {
+          icon: "👰‍♀️",
+          title: "Hairdo Pengantin",
+          desc: "Tatanan rambut elegan untuk hari pernikahan.",
+          price: "Mulai Rp 800.000",
+          features: ["Tahan lama", "Aksesoris", "Trial session"],
+          popular: true,
+          text: "Halo Imelda Salon, saya mau konsultasi Hairdo Pengantin"
+        },
+        {
+          icon: "👯‍♀️",
+          title: "Hairdo Bridesmaid",
+          desc: "Styling rambut serasi untuk pendamping pengantin.",
+          price: "Mulai Rp 250.000",
+          features: ["Serasi", "Natural", "Cepat"],
+          popular: false,
+          text: "Halo Imelda Salon, saya mau konsultasi Hairdo Bridesmaid"
+        },
+        {
+          icon: "✨",
+          title: "Hairdo Pesta",
+          desc: "Hair styling glamor untuk acara formal & pesta.",
+          price: "Mulai Rp 200.000",
+          features: ["Glamor", "Modern", "Elegant"],
+          popular: false,
+          text: "Halo Imelda Salon, saya mau konsultasi Hairdo Pesta"
+        },
+      ].map((item, i) => (
+
+        <div
+          key={i}
+          className={`
+            group relative rounded-2xl bg-white p-8 shadow-lg
+            hover:-translate-y-2 hover:shadow-xl transition-all duration-300
+            ${item.popular ? 'ring-2 ring-primary' : 'border border-border/60'}
+          `}
+        >
+
+          {/* Popular Badge */}
+          {item.popular && (
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-primary/90 px-4 py-1.5 text-xs font-semibold text-white shadow-lg whitespace-nowrap">
+              ⭐ Paling Diminati
             </span>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Jenis Hairdo Wedding
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Tampil memukau di hari spesial dengan berbagai pilihan tatanan rambut
-            </p>
-          </div>
+          )}
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {[
-              {
-                icon: "👰‍♀️",
-                title: "Hairdo Pengantin",
-                desc: "Tatanan rambut elegan untuk hari pernikahan.",
-                price: "Mulai Rp 800.000",
-                features: ["Tahan lama", "Aksesoris", "Trial session"],
-                popular: true
-              },
-              {
-                icon: "👯‍♀️",
-                title: "Hairdo Bridesmaid",
-                desc: "Styling rambut serasi untuk pendamping pengantin.",
-                price: "Mulai Rp 250.000",
-                features: ["Serasi", "Natural", "Cepat"],
-                popular: false
-              },
-              {
-                icon: "✨",
-                title: "Hairdo Pesta",
-                desc: "Hair styling glamor untuk acara formal & pesta.",
-                price: "Mulai Rp 200.000",
-                features: ["Glamor", "Modern", "Elegant"],
-                popular: false
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`
-                  group relative rounded-2xl bg-white p-8 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300
-                  ${item.popular ? 'ring-2 ring-primary' : 'border border-border/60'}
-                `}
-              >
-                {item.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-primary/90 px-4 py-1.5 text-xs font-semibold text-white shadow-lg whitespace-nowrap">
-                    ⭐ Paling Diminati
-                  </span>
-                )}
-                
-                {/* Icon */}
-                <div className="mb-4 text-5xl">{item.icon}</div>
-                
-                <h3 className="font-semibold text-xl mb-2">
-                  {item.title}
-                </h3>
-                
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                  {item.desc}
-                </p>
+          {/* Icon */}
+          <div className="mb-4 text-5xl">{item.icon}</div>
 
-                {/* Features */}
-                <div className="space-y-2 mb-6">
-                  {item.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm">
-                      <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Price */}
-                <div className="pt-4 border-t border-border/50">
-                  <p className="text-sm text-muted-foreground mb-1">Harga</p>
-                  <p className="text-2xl font-bold text-primary">
-                    {item.price}
-                  </p>
-                </div>
+          <h3 className="font-semibold text-xl mb-2">
+            {item.title}
+          </h3>
+
+          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+            {item.desc}
+          </p>
+
+          {/* Features */}
+          <div className="space-y-2 mb-6">
+            {item.features.map((feature, idx) => (
+              <div key={idx} className="flex items-center gap-2 text-sm">
+                <svg
+                  className="h-4 w-4 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span className="text-muted-foreground">{feature}</span>
               </div>
             ))}
           </div>
 
-          {/* Custom Request */}
-          <div className="text-center mt-12">
-            <div className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-border/60 rounded-full px-6 py-2">
-              <span className="text-primary">💭</span>
-              <p className="text-sm text-muted-foreground">
-                Butuh tatanan rambut khusus? 
-                <Link href="/contact" className="ml-1 font-medium text-primary hover:underline">
-                  Konsultasi gratis
-                </Link>
+          {/* Price + Button */}
+          <div className="pt-4 border-t border-border/50 space-y-4">
+            <div>
+              <p className="text-sm text-muted-foreground mb-1">Harga</p>
+              <p className="text-2xl font-bold text-primary">
+                {item.price}
               </p>
             </div>
+
+            {/* BUTTON WA */}
+            <a
+              href={`https://wa.me/6282285310686?text=${encodeURIComponent(item.text)}`}
+              target="_blank"
+              className="block w-full text-center rounded-xl bg-primary text-white py-2.5 font-medium hover:bg-primary/90 transition"
+            >
+              Konsultasi via WhatsApp
+            </a>
           </div>
+
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
+
 
       {/* ================= KEUNGGULAN SECTION ================= */}
       <section className="py-20 sm:py-24">

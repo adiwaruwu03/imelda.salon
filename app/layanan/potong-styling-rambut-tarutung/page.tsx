@@ -9,54 +9,37 @@ export default function PotongRambutPage() {
       <Header />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative isolate overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"
-            alt="Salon background"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80" />
-        </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-secondary/20 via-transparent to-transparent" />
-        
-        <div className="relative py-32 lg:py-40">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center space-y-8">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
-                Potong Rambut & Styling 
-                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200">
-                  Profesional di Tarutung
-                </span>
-              </h1>
-
-              <p className="text-lg sm:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto">
-                Tampil lebih percaya diri dengan gaya rambut modern
-                bersama hair stylist berpengalaman di Imelda Salon.
-              </p>
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 pt-12 max-w-2xl mx-auto border-t border-white/20">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">500+</div>
-                  <div className="text-xs sm:text-sm text-gray-300">Client Puas</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">10+</div>
-                  <div className="text-xs sm:text-sm text-gray-300">Stylist Profesional</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">5+</div>
-                  <div className="text-xs sm:text-sm text-gray-300">Tahun Pengalaman</div>
-                </div>
+      <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary/50 to-background py-24 sm:py-32">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center space-y-6">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">         
+              <span className="block text-primary mt-2">Potong Rambut & Styling Tarutung</span>
+            </h1>
+            
+        {/* DESKRIPSI */}
+        <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+          Tampil lebih percaya diri dengan gaya rambut modern
+          bersama hair stylist berpengalaman di Imelda Salon.
+        </p>
+                    {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 pt-12 max-w-2xl mx-auto border-t border-border">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">500+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Client Puas</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">10+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Stylist Profesional</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">5+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Tahun Pengalaman</div>
               </div>
             </div>
+
           </div>
         </div>
-      </section>
+    </section>
 
       {/* ================= DESKRIPSI SECTION ================= */}
       <section className="py-20 sm:py-24 bg-gradient-to-b from-background to-secondary/5">
