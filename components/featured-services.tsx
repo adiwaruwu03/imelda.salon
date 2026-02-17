@@ -305,7 +305,7 @@ export function FeaturedServices() {
           </p>
         </div>
       </div>
-
+                
       {/* ================= GLOBAL STYLES ================= */}
       <style jsx global>{`
         @keyframes float {

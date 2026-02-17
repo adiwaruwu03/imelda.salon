@@ -107,7 +107,7 @@ export default function LayananPage() {
           {[
             { label: "Layanan Profesional", value: "15+", icon: "✨" },
             { label: "Client Puas", value: "500+", icon: "👥" },
-            { label: "Stylist Berpengalaman", value: "10+", icon: "💇‍♀️" },
+            { label: "Stylist Berpengalaman", value: "", icon: "💇‍♀️" },
             { label: "Home Service", value: "Tersedia", icon: "🏠" },
           ].map((stat, idx) => (
             <div key={idx} className="bg-white/50 backdrop-blur-sm rounded-xl p-4 text-center border border-border/50 shadow-sm">

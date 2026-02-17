@@ -1,7 +1,26 @@
+'use client'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+
+/* ================= WHATSAPP FUNCTION ================= */
+const WHATSAPP_NUMBER = "6282285310686"
+
+function handleWhatsApp(title: string, price: string) {
+  const message = encodeURIComponent(
+    `Halo Imelda Salon 👋
+
+Saya tertarik dengan layanan:
+
+💇‍♀️ ${title}
+💰 Harga: ${price}
+
+Apakah masih tersedia? Mohon info jadwal & detailnya ya. Terima kasih 🙏`
+  )
+
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank')
+}
 
 export default function PotongRambutPage() {
   return (
@@ -186,7 +205,7 @@ export default function PotongRambutPage() {
         </div>
       </section>
 
-      {/* ================= HARGA SECTION ================= */}
+       {/* ================= HARGA SECTION ================= */}
       <section id="harga" className="py-20 sm:py-24 bg-gradient-to-b from-background to-secondary/5">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
@@ -245,20 +264,47 @@ export default function PotongRambutPage() {
                   </span>
                 )}
                 
-                <div className="text-center">
+                {/* CONTENT */}
+                <div className="text-center flex flex-col h-full">
                   <span className="mb-3 inline-block text-3xl">{item.icon}</span>
+
                   <h3 className="font-semibold text-lg mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm font-medium text-primary bg-primary/5 py-2 px-4 rounded-full inline-block">
+
+                  <p className="text-sm font-medium text-primary bg-primary/5 py-2 px-4 rounded-full inline-block mb-5">
                     {item.price}
                   </p>
+
+                  {/* BUTTON WHATSAPP */}
+                  <button
+                    onClick={() => handleWhatsApp(item.title, item.price)}
+                    className={`
+                      mt-auto w-full py-2.5 rounded-xl font-medium transition
+                      flex items-center justify-center gap-2
+                      ${item.popular
+                        ? 'bg-primary text-white hover:opacity-90'
+                        : 'border border-primary text-primary hover:bg-primary hover:text-white'}
+                    `}
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.93 3.178 0 5.767-2.587 5.768-5.766.001-3.18-2.585-5.766-5.764-5.772z"/>
+                    </svg>
+
+                    Pesan via WhatsApp
+                  </button>
                 </div>
+
               </div>
             ))}
           </div>
         </div>
       </section>
+
       {/* ================= TESTIMONI SECTION ================= */}
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

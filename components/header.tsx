@@ -12,6 +12,7 @@ export function Header() {
     { label: 'Layanan', href: '/layanan' },
     { label: 'Booking', href: '/booking' },
     { label: 'Kontak', href: '/contact' },
+    { label: 'blog', href: '/blog' },
   ]
 
   return (
