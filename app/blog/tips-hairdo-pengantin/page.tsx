@@ -229,7 +229,7 @@ export default function TipsHairdoPengantin() {
             </p>
             <div className="flex gap-4 justify-center">
             <Link
-              href="/layanan/hairdo-pengantin-tarutung"
+              href="/layanan/hairdo-wedding-tarutung"
               className="px-8 py-4 bg-white text-primary rounded-xl font-semibold"
             >
               Lihat Layanan
