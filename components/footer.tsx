@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { MessageCircle, MapPin, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
+
 export function Footer() {
   const whatsappNumber = '6282285310686'
 
@@ -12,34 +13,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* About */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">IMELDA SALON</h3>
-            <p className="text-primary-foreground/80 text-sm">
-              Salon kecantikan profesional dengan layanan lengkap untuk memberikan hasil terbaik.
-            </p>
-          </div>
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="text-2xl font-bold text-semiwhite">IMELDA</span>
+            <span className="text-xs font-semibold text-muted-foreground">SALON</span>
+          </Link>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Menu Cepat</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>
-                <Link href="/layanan" className="hover:text-primary-foreground transition-colors">
-                  Layanan & Harga
-                </Link>
-              </li>
-              <li>
-                <Link href="/booking" className="hover:text-primary-foreground transition-colors">
-                  Booking Online
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-primary-foreground transition-colors">
-                  Kontak Kami
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
 
           {/* Contact */}
           <div className="space-y-4">

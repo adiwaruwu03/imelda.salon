@@ -9,7 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   // ✅ TITLE SEO LOKAL KUAT
-  title: "Imelda Salon Tarutung | Salon & Makeup Artist Garoga Tapanuli Utara",
+  title: "Imelda Salon| Salon & Makeup Artist Tarutung-Garoga Tapanuli Utara",
 
   // ✅ DESCRIPTION SEO LOKAL
   description:
@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   // ✅ KEYWORDS
   keywords: [
     "Salon Tarutung",
+    "salon kecantikan Tarutung",
+    "salon rambut Tarutung",
+    "makeup artist Tarutung",
+    "rias pengantin Tarutung",
+    "potong rambut Tarutung",
+    "hair styling Tarutung",
+    "hairdo Tarutung",
+    "salon wanita Tarutung",
+    "salon tarutung garoga",
+    "salon tarutung",
     "Salon Garoga",
     "Salon Tapanuli Utara",
     "Makeup Artist Tarutung",
