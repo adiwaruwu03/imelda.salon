@@ -228,67 +228,7 @@ export function FeaturedServices() {
           </div>
         </div>
 
-        {/* Partner / Support - Premium Card */}
-        <div className="mt-28 relative fade-up">
-          {/* Background Decoration */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 rounded-3xl -z-10 transform -rotate-1 scale-[1.02] blur-sm" />
-          
-          <div className="relative bg-gradient-to-br from-white to-secondary/5 rounded-3xl p-10 lg:p-12 shadow-xl border border-border/50">
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-              {/* Left Content */}
-              <div className="flex-1 text-center lg:text-left space-y-4">
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
-                  <Code className="h-4 w-4" />
-                  Digital & Technology Partner
-                </div>
-
-                <h4 className="text-2xl lg:text-3xl font-bold">
-                  Digital & Marketing Support
-                </h4>
-
-                <p className="text-muted-foreground leading-relaxed text-lg">
-                  Website dan sistem digital Imelda Salon didukung oleh
-                  <span className="font-semibold text-primary mx-1">
-                    Adi Waruwu
-                  </span>
-                  sebagai Digital Support & Web Developer yang membantu
-                  pengembangan website, branding, dan pemasaran online salon.
-                </p>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 pt-4 justify-center lg:justify-start">
-                  <span className="px-3 py-1.5 bg-primary/5 rounded-full text-xs font-medium text-primary border border-primary/20">
-                    Next.js
-                  </span>
-                  <span className="px-3 py-1.5 bg-primary/5 rounded-full text-xs font-medium text-primary border border-primary/20">
-                    Tailwind CSS
-                  </span>
-                  <span className="px-3 py-1.5 bg-primary/5 rounded-full text-xs font-medium text-primary border border-primary/20">
-                    SEO
-                  </span>
-                  <span className="px-3 py-1.5 bg-primary/5 rounded-full text-xs font-medium text-primary border border-primary/20">
-                    Digital Marketing
-                  </span>
-                </div>
-                
-              </div>
-            </div>
-
-            {/* Portfolio Button */}
-        <div className="mt-8 text-center lg:text-right">
-          <Link 
-            href="https://www.instagram.com/adi_waruwwu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium group"
-          >
-            <span>Lihat Instagram Developer</span>
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-
-          </div>
-        </div>
+        
 
         {/* Call to Action */}
         <div className="mt-20 text-center fade-up">
