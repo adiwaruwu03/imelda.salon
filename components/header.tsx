@@ -63,7 +63,7 @@ export function Header() {
               <span className={cn("text-sm md:text-lg font-serif font-bold tracking-tight leading-none transition-colors", onHero ? "text-primary-foreground" : "text-foreground")}>
                 IMELDA
               </span>
-              <span className={cn("text-[7px] md:text-[9px] font-sans font-black tracking-[0.3em] uppercase leading-none mt-1", onHero ? "text-accent" : "text-primary")}>
+              <span className={cn("text-[7px] md:text-[9px] font-sans font-black tracking-[0.3em] uppercase leading-none mt-1", onHero ? "text-accent" : "text-accent")}>
                 SALON
               </span>
             </div>
@@ -79,7 +79,7 @@ export function Header() {
                   "px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300",
                   isActive(item.href)
                     ? onHero ? "bg-accent text-accent-foreground" : "bg-primary text-primary-foreground shadow-md shadow-primary/20"
-                    : onHero ? "text-primary-foreground/70 hover:text-accent" : "text-foreground/60 hover:text-primary hover:bg-card/70"
+                    : onHero ? "text-primary-foreground/70 hover:text-accent" : "text-foreground/60 hover:text-accent hover:bg-card/70"
                 )}
               >
                 {item.label}
@@ -94,7 +94,7 @@ export function Header() {
                 onClick={() => setLanguage('id')}
                 className={cn(
                   "transition-colors",
-                  language === 'id' ? (onHero ? "text-accent" : "text-foreground") : (onHero ? "text-primary-foreground/60 hover:text-accent" : "text-muted-foreground hover:text-primary")
+                  language === 'id' ? (onHero ? "text-accent" : "text-foreground") : (onHero ? "text-primary-foreground/60 hover:text-accent" : "text-muted-foreground hover:text-accent")
                 )}
               >
                 ID
@@ -104,7 +104,7 @@ export function Header() {
                 onClick={() => setLanguage('en')}
                 className={cn(
                   "transition-colors",
-                  language === 'en' ? (onHero ? "text-accent" : "text-foreground") : (onHero ? "text-primary-foreground/60 hover:text-accent" : "text-muted-foreground hover:text-primary")
+                  language === 'en' ? (onHero ? "text-accent" : "text-foreground") : (onHero ? "text-primary-foreground/60 hover:text-accent" : "text-muted-foreground hover:text-accent")
                 )}
               >
                 EN

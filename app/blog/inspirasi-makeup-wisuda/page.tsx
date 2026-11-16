@@ -78,11 +78,11 @@ export default function Page() {
       {/* Breadcrumb */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-8">
         <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-          <Link href="/" className="hover:text-primary transition-colors">
+          <Link href="/" className="hover:text-accent transition-colors">
             Beranda
           </Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href="/blog" className="hover:text-primary transition-colors">
+          <Link href="/blog" className="hover:text-accent transition-colors">
             Blog
           </Link>
           <ChevronRight className="w-4 h-4" />
@@ -118,7 +118,7 @@ export default function Page() {
           </div>
           
           {/* Judul */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
           Inspirasi Makeup Wisuda <br />Natural & Elegan
         </h1>
           
@@ -143,7 +143,7 @@ export default function Page() {
         {/* TREND SECTION */}
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-            <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-lg">
+            <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg">
               ✨
             </span>
             Makeup Wisuda Natural Lagi Tren
@@ -173,12 +173,12 @@ export default function Page() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute -bottom-3 -right-3 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-3 -right-3 w-24 h-24 bg-accent/10 rounded-full blur-2xl"></div>
             </div>
           </div>
 
           {/* Intro dengan highlight */}
-        <div className="bg-gradient-to-r from-secondary/20 to-transparent p-6 rounded-xl mb-10 border-l-4 border-primary">
+        <div className="bg-gradient-to-r from-secondary/20 to-transparent p-6 rounded-xl mb-10 border-l-4 border-accent">
           <p className="text-foreground leading-relaxed">
             Makeup wisuda natural menjadi pilihan favorit karena memberikan
             kesan segar, elegan, dan tetap terlihat seperti diri sendiri.
@@ -190,7 +190,7 @@ export default function Page() {
         {/* CIRI MAKEUP ELEGAN */}
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-            <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-lg">
+            <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg">
               💄
             </span>
             Ciri Makeup Wisuda Elegan
@@ -202,11 +202,11 @@ export default function Page() {
               return (
                 <div 
                   key={index}
-                  className="p-5 bg-card rounded-xl border border-border hover:border-primary/20 hover:shadow-md transition-all group"
+                  className="p-5 bg-card rounded-xl border border-border hover:border-accent/20 hover:shadow-md transition-all group"
                 >
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0">
-                      <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <div className="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                         <Icon className="w-5 h-5" />
                       </div>
                     </div>
@@ -227,7 +227,7 @@ export default function Page() {
           <div className="relative p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
-                <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-4">
                   <Home className="w-4 h-4" />
                   <span>Layanan Home Service</span>
                 </div>
@@ -238,7 +238,7 @@ export default function Page() {
                 
                 <p className="text-muted-foreground mb-4">
                   Buat kamu yang tidak sempat datang ke salon, 
-                  <span className="font-semibold text-primary"> makeup wisuda bisa panggilan langsung ke rumah.</span>
+                  <span className="font-semibold text-accent"> makeup wisuda bisa panggilan langsung ke rumah.</span>
                   Tim Imelda Salon siap datang ke lokasi kamu di Tarutung dan sekitarnya.
                 </p>
                 
@@ -249,7 +249,7 @@ export default function Page() {
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {serviceLocations.map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">{item}</span>
                     </div>
                   ))}
@@ -257,11 +257,11 @@ export default function Page() {
                 
                 <div className="flex items-center gap-4 text-sm">
                   <div className="flex items-center gap-1">
-                    <Phone className="w-4 h-4 text-primary" />
+                    <Phone className="w-4 h-4 text-accent" />
                     <span className="text-muted-foreground">0822-8531-0686</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4 text-primary" />
+                    <MapPin className="w-4 h-4 text-accent" />
                     <span className="text-muted-foreground">Tarutung & Garoga</span>
                   </div>
                 </div>
@@ -269,8 +269,8 @@ export default function Page() {
               
               <div className="flex-shrink-0">
                 <div className="relative w-48 h-48">
-                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl"></div>
-                  <div className="relative bg-black from-primary to-accent w-48 h-48 rounded-2xl flex items-center justify-center text-white text-6xl shadow-xl">
+                  <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl"></div>
+                  <div className="relative bg-deep border border-accent/40 w-48 h-48 rounded-2xl flex items-center justify-center text-accent text-6xl shadow-xl">
                     <Home className="w-24 h-24" />
                   </div>
                 </div>
@@ -282,7 +282,7 @@ export default function Page() {
         {/* TESTIMONIALS */}
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-            <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-lg">
+            <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg">
               💬
             </span>
             Kata Mereka yang Sudah Makeup Wisuda
@@ -293,12 +293,12 @@ export default function Page() {
               <div key={index} className="p-6 bg-card rounded-xl border border-border">
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4 italic">&quot;{testimonial.comment}&quot;</p>
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-accent/10 text-accent rounded-full flex items-center justify-center">
                     <User className="w-4 h-4" />
                   </div>
                   <span className="font-medium text-foreground">{testimonial.name}</span>
@@ -313,13 +313,13 @@ export default function Page() {
         {/* CTA BOX - REDESIGNED */}
         <div className="relative overflow-hidden rounded-2xl mb-12">
           <div className="relative p-8 md:p-10 text-center text-white">
-            <Heart className="w-12 h-12 mx-auto mb-4 text-black/80" />
+            <Heart className="w-12 h-12 mx-auto mb-4 text-foreground" />
             
-            <h3 className="text-2xl md:text-3xl text-black font-bold mb-3">
+            <h3 className="text-2xl md:text-3xl text-foreground font-bold mb-3">
               Booking Makeup Wisuda Sekarang
             </h3>
 
-            <p className="text-black/90 mb-6 max-w-xl mx-auto">
+            <p className="text-foreground mb-6 max-w-xl mx-auto">
               Tersedia paket hemat + bisa panggilan ke rumah. 
               Dapatkan free konsultasi untuk look makeup impian Anda!
             </p>
@@ -327,7 +327,7 @@ export default function Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 href="/layanan/makeup-wisuda-tarutung"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-accent rounded-xl font-semibold hover:bg-card/90 transition-all transform hover:scale-105 shadow-lg"
               >
                 Lihat Detail Layanan
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -336,7 +336,7 @@ export default function Page() {
               <a
                 href="https://wa.me/6282285310686"
                 target="_blank"
-                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
+                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-accent rounded-xl font-semibold hover:bg-card/90 transition-all transform hover:scale-105 shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" />
                 Booking via WhatsApp
@@ -352,7 +352,7 @@ export default function Page() {
         {/* ARTIKEL TERKAIT */}
         <div className="mt-12 p-6 bg-card rounded-xl border border-border">
           <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-            <span className="w-6 h-6 bg-primary/10 text-primary rounded flex items-center justify-center text-sm">
+            <span className="w-6 h-6 bg-accent/10 text-accent rounded flex items-center justify-center text-sm">
               📖
             </span>
             Baca Juga:
@@ -361,18 +361,18 @@ export default function Page() {
             <li>
               <Link 
                 href="/blog/tips-hairdo-pengantin"
-                className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="group flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
               >
-                <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
                 <span>Tips Hairdo Pengantin Agar Tahan Seharian</span>
               </Link>
             </li>
             <li>
               <Link 
                 href="/blog/harga-mua-tarutung"
-                className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="group flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
               >
-                <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
                 <span>Harga MUA Pengantin Tarutung Terbaru</span>
               </Link>
             </li>
@@ -383,7 +383,7 @@ export default function Page() {
         <div className="text-center pt-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group"
+            className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Kembali ke Blog

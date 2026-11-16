@@ -8,7 +8,7 @@ export function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative overflow-hidden bg-primary text-primary-foreground pt-28 md:pt-24 md:h-[calc(100svh-3.75rem)] md:min-h-[520px]">
+    <section className="relative overflow-hidden bg-background text-foreground pt-28 md:pt-24 md:h-[calc(100svh-3.75rem)] md:min-h-[520px]">
       {/* Tekstur radial halus */}
       <div className="pointer-events-none absolute inset-0 [background:radial-gradient(ellipse_at_25%_70%,#c5a14a26,transparent_50%),radial-gradient(ellipse_at_90%_10%,#3b0913,transparent_55%)]" />
 
@@ -41,8 +41,8 @@ export function Hero() {
           />
 
           {/* Label nama & jabatan owner */}
-          <div className="absolute z-20 bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-3 whitespace-nowrap rounded-full bg-background pl-5 pr-1.5 py-1.5 shadow-xl shadow-black/40 ring-1 ring-accent/60">
-            <span className="font-serif italic text-base md:text-lg leading-none text-primary">Melda Pasaribu</span>
+          <div className="absolute z-20 bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-3 whitespace-nowrap rounded-full bg-foreground pl-5 pr-1.5 py-1.5 shadow-xl shadow-black/40 ring-1 ring-accent/60">
+            <span className="font-serif italic text-base md:text-lg leading-none text-background">Melda Pasaribu</span>
             <span className="rounded-full bg-accent px-3 py-1.5 text-[9px] md:text-[10px] leading-none font-bold uppercase tracking-[0.3em] text-accent-foreground">
               Founder
             </span>

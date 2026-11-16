@@ -35,7 +35,7 @@ export function SignatureServices() {
           <div className="text-center mb-12 fade-up">
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">Signature Services</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold mt-3">
-              Layanan <span className="text-primary italic">Unggulan</span>
+              Layanan <span className="text-accent italic">Unggulan</span>
             </h2>
           </div>
 
@@ -56,7 +56,7 @@ export function SignatureServices() {
                   </div>
                   <div className="p-6 flex items-end justify-between gap-4">
                     <div>
-                      <h3 className={`font-serif text-2xl font-bold ${s.featured ? 'text-accent' : 'text-primary'}`}>{s.title}</h3>
+                      <h3 className={`font-serif text-2xl font-bold ${s.featured ? 'text-accent' : 'text-accent'}`}>{s.title}</h3>
                       <p className={`text-sm mt-1 ${s.featured ? 'text-primary-foreground/75' : 'text-muted-foreground'}`}>{s.desc}</p>
                     </div>
                     <ArrowUpRight className="h-5 w-5 shrink-0 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />

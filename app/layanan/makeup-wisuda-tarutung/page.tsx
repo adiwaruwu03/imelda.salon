@@ -34,7 +34,7 @@ export default function MakeupWisudaTarutungPage() {
   ]
 
   return (
-      <main className="min-h-screen bg-background"> <Header /> {/* ================= HERO SECTION ================= */} <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary/50 to-background py-24 sm:py-32"> <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center space-y-6"> <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text"> <span className="block text-primary mt-2">Makeup Wisuda Tarutung</span> </h1> {/* DESKRIPSI */} <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"> Tampil lebih percaya diri dengan makeup wisuda profesional bersama makeup artist berpengalaman di Imelda Salon. </p> {/* Stats */} <div className="grid grid-cols-3 gap-4 pt-12 max-w-2xl mx-auto border-t border-border"> <div className="text-center"> <div className="text-2xl font-bold text-foreground">500+</div> <div className="text-xs sm:text-sm text-muted-foreground">Client Puas</div> </div> <div className="text-center"> <div className="text-2xl font-bold text-foreground">10+</div> <div className="text-xs sm:text-sm text-muted-foreground">Stylist Profesional</div> </div> <div className="text-center"> <div className="text-2xl font-bold text-foreground">5+</div> <div className="text-xs sm:text-sm text-muted-foreground">Tahun Pengalaman</div> </div> </div> </div> </div> </section>
+      <main className="min-h-screen bg-background"> <Header /> {/* ================= HERO SECTION ================= */} <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary/50 to-background py-24 sm:py-32"> <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"> <div className="mx-auto max-w-2xl text-center space-y-6"> <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text"> <span className="block text-accent mt-2">Makeup Wisuda Tarutung</span> </h1> {/* DESKRIPSI */} <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"> Tampil lebih percaya diri dengan makeup wisuda profesional bersama makeup artist berpengalaman di Imelda Salon. </p> {/* Stats */} <div className="grid grid-cols-3 gap-4 pt-12 max-w-2xl mx-auto border-t border-border"> <div className="text-center"> <div className="text-2xl font-bold text-foreground">500+</div> <div className="text-xs sm:text-sm text-muted-foreground">Client Puas</div> </div> <div className="text-center"> <div className="text-2xl font-bold text-foreground">10+</div> <div className="text-xs sm:text-sm text-muted-foreground">Stylist Profesional</div> </div> <div className="text-center"> <div className="text-2xl font-bold text-foreground">5+</div> <div className="text-xs sm:text-sm text-muted-foreground">Tahun Pengalaman</div> </div> </div> </div> </div> </section>
 
       {/* ================= HERO ================= */}
       <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary/50 to-background py-24 sm:py-32">
@@ -50,7 +50,7 @@ export default function MakeupWisudaTarutungPage() {
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                   Jasa Makeup 
-                  <span className="block text-primary">
+                  <span className="block text-accent">
                     Wisuda
                   </span>
                 </h1>
@@ -69,8 +69,8 @@ export default function MakeupWisudaTarutungPage() {
                   const Icon = f.icon
                   return (
                     <div key={i} className="flex items-center gap-2">
-                      <div className="p-1.5 bg-primary/10 rounded-lg">
-                        <Icon className="w-4 h-4 text-primary" />
+                      <div className="p-1.5 bg-accent/10 rounded-lg">
+                        <Icon className="w-4 h-4 text-accent" />
                       </div>
                       <span className="text-sm">{f.text}</span>
                     </div>
@@ -156,7 +156,7 @@ export default function MakeupWisudaTarutungPage() {
                   "Touch up kit",
                 ].map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm">
-                    <Check className="w-4 h-4 text-primary" />
+                    <Check className="w-4 h-4 text-accent" />
                     {item}
                   </li>
                 ))}
@@ -191,7 +191,7 @@ export default function MakeupWisudaTarutungPage() {
                   "False lashes",
                 ].map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm">
-                    <Check className="w-4 h-4 text-primary" />
+                    <Check className="w-4 h-4 text-accent" />
                     {item}
                   </li>
                 ))}

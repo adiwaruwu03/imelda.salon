@@ -54,11 +54,11 @@ export default function ShopPage() {
   })
 
   return (
-    <main className="min-h-screen bg-[#fcf8f1] pt-28">
+    <main className="min-h-screen bg-background pt-28">
       <Header />
 
       {/* Filters & Search */}
-      <section className="sticky top-16 md:top-20 z-30 bg-[#fcf8f1]/80 backdrop-blur-xl border-y border-border/40 py-4 md:py-6 px-4 md:px-8 mb-6 md:mb-12">
+      <section className="sticky top-16 md:top-20 z-30 bg-background/80 backdrop-blur-xl border-y border-border/40 py-4 md:py-6 px-4 md:px-8 mb-6 md:mb-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0 w-full md:w-auto scrollbar-hide no-scrollbar">
             {categories.map((cat) => (
@@ -68,8 +68,8 @@ export default function ShopPage() {
                 className={cn(
                   "px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-widest transition-all whitespace-nowrap border",
                   activeCategory === cat.id
-                    ? "bg-foreground text-background border-foreground shadow-lg shadow-black/10"
-                    : "bg-white border-border/50 text-muted-foreground hover:border-primary hover:text-primary"
+                    ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-black/10"
+                    : "bg-card border-border/50 text-muted-foreground hover:border-accent hover:text-accent"
                 )}
               >
                 {t(cat.labelKey) || cat.id}
@@ -83,7 +83,7 @@ export default function ShopPage() {
               placeholder="Search products..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-11 h-10 md:h-12 rounded-full bg-white border-border/50 focus:ring-primary shadow-sm text-sm"
+              className="pl-11 h-10 md:h-12 rounded-full bg-card border-border/50 focus:ring-primary shadow-sm text-sm"
             />
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function ShopPage() {
         {loading ? (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="bg-white/50 rounded-2xl md:rounded-[2.5rem] p-2 md:p-4 h-[250px] md:h-[400px] animate-pulse" />
+              <div key={i} className="bg-card/50 rounded-2xl md:rounded-[2.5rem] p-2 md:p-4 h-[250px] md:h-[400px] animate-pulse" />
             ))}
           </div>
         ) : (
@@ -105,7 +105,7 @@ export default function ShopPage() {
                 href={`/shop/${product.slug}`}
                 className="group animate-fade-up flex flex-col"
               >
-                <div className="bg-[#f5f0e8] rounded-2xl md:rounded-[2.5rem] p-2 md:p-4 flex flex-col h-full transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1">
+                <div className="bg-card rounded-2xl md:rounded-[2.5rem] p-2 md:p-4 flex flex-col h-full transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1">
                   {/* Image Container */}
                   <div className="relative aspect-[4/5] rounded-xl md:rounded-[2rem] overflow-hidden mb-3 md:mb-6">
                     <img 
@@ -118,10 +118,10 @@ export default function ShopPage() {
                   {/* Info Container */}
                   <div className="space-y-2 md:space-y-4 px-1 md:px-2 flex-grow">
                     <div>
-                      <span className="inline-block px-2 md:px-4 py-0.5 md:py-1 rounded-full bg-white text-[7px] md:text-[9px] font-bold uppercase tracking-widest text-muted-foreground shadow-sm mb-1 md:mb-3">
+                      <span className="inline-block px-2 md:px-4 py-0.5 md:py-1 rounded-full bg-card text-[7px] md:text-[9px] font-bold uppercase tracking-widest text-muted-foreground shadow-sm mb-1 md:mb-3">
                         {product.category}
                       </span>
-                      <h3 className="text-sm md:text-xl font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors line-clamp-1">
+                      <h3 className="text-sm md:text-xl font-serif font-bold text-foreground leading-tight group-hover:text-accent transition-colors line-clamp-1">
                         {product.name}
                       </h3>
                       <p className="hidden md:block text-xs text-muted-foreground mt-2 line-clamp-2 leading-relaxed">
@@ -129,8 +129,8 @@ export default function ShopPage() {
                       </p>
                     </div>
 
-                    <div className="pt-2 md:pt-4 mt-auto border-t border-black/5">
-                      <p className="text-xs md:text-lg font-bold text-primary/80">
+                    <div className="pt-2 md:pt-4 mt-auto border-t border-border">
+                      <p className="text-xs md:text-lg font-bold text-accent/80">
                         Rp {Number(product.price).toLocaleString('id-ID')}
                       </p>
                     </div>
@@ -143,7 +143,7 @@ export default function ShopPage() {
 
         {!loading && filteredProducts.length === 0 && (
           <div className="py-20 text-center space-y-4">
-            <div className="h-20 w-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto text-primary">
+            <div className="h-20 w-20 bg-accent/5 rounded-full flex items-center justify-center mx-auto text-accent">
               <ShoppingBag size={40} />
             </div>
             <h3 className="text-xl font-bold">Produk tidak ditemukan</h3>

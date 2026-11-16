@@ -24,7 +24,7 @@ export default function MUAPengantinPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center space-y-6">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">         
-              <span className="block text-primary mt-2">MUA Pengantin Tarutung</span>
+              <span className="block text-accent mt-2">MUA Pengantin Tarutung</span>
             </h1>
             
             <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
@@ -50,13 +50,13 @@ export default function MUAPengantinPage() {
       {/* ================= TEXT ================= */}
       <div className="space-y-6">
 
-        <div className="inline-flex rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+        <div className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
           Tentang Kami
         </div>
         
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Jasa MUA Pengantin Profesional
-          <span className="block text-primary mt-2">
+          <span className="block text-accent mt-2">
             di Tarutung
           </span>
         </h2>
@@ -107,7 +107,7 @@ export default function MUAPengantinPage() {
         />
 
         {/* Badge pengalaman */}
-        <div className="absolute -bottom-6 -left-6 bg-white shadow-lg rounded-xl px-4 py-3">
+        <div className="absolute -bottom-6 -left-6 bg-card shadow-lg rounded-xl px-4 py-3">
           <p className="text-xs text-muted-foreground">
             Makeup Artist Profesional
           </p>
@@ -182,7 +182,7 @@ export default function MUAPengantinPage() {
               <div
                 key={index}
                 className={`
-                  relative rounded-2xl bg-white p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col h-full
+                  relative rounded-2xl bg-card p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl flex flex-col h-full
                   ${paket.popular ? 'ring-2 ring-primary' : ''}
                 `}
               >
@@ -196,13 +196,13 @@ export default function MUAPengantinPage() {
                 <p className="text-sm text-muted-foreground mb-4">{paket.description}</p>
                 
                 <div className="mb-4">
-                  <span className="text-3xl font-bold text-primary">{paket.priceFormatted}</span>
+                  <span className="text-3xl font-bold text-accent">{paket.priceFormatted}</span>
                 </div>
                 
                 <ul className="space-y-2 mb-6 flex-grow">
                   {paket.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm">
-                      <svg className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-muted-foreground">{feature}</span>
@@ -349,7 +349,7 @@ export default function MUAPengantinPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl bg-card p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
                 <div className="relative">

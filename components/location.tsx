@@ -13,7 +13,7 @@ export function Location() {
             <div className="space-y-4">
               <h2 className="font-sans text-[11px] font-bold uppercase tracking-[0.3em] text-accent">Our Location</h2>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground leading-tight">
-                Kunjungi Salon <br /><span className="text-primary italic">Kami Sekarang</span>
+                Kunjungi Salon <br /><span className="text-accent italic">Kami Sekarang</span>
               </h3>
             </div>
 

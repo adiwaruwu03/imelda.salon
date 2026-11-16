@@ -35,7 +35,7 @@ export function FeaturedServices() {
           <div className="lg:col-span-3 rounded-[2rem] bg-card border border-accent/40 p-8 md:p-12 shadow-xl shadow-primary/5 space-y-6 fade-up">
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">{t('owner_badge')}</p>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground leading-tight">
-              {t('owner_title_1')} <span className="text-primary italic">{t('owner_title_2')}</span>
+              {t('owner_title_1')} <span className="text-accent italic">{t('owner_title_2')}</span>
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">{t('owner_desc')}</p>
             <div className="grid sm:grid-cols-2 gap-4 pt-2">
@@ -68,7 +68,7 @@ export function FeaturedServices() {
           <div className="relative overflow-hidden rounded-[2rem] bg-card border border-accent/40 p-8 md:p-10 transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/10 fade-up">
             <span className="absolute -top-4 right-6 font-serif text-[7rem] font-bold text-accent/15 select-none">V</span>
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">Visi</p>
-            <h3 className="text-2xl font-serif font-bold text-primary mt-2 mb-4">Visi Kami</h3>
+            <h3 className="text-2xl font-serif font-bold text-accent mt-2 mb-4">Visi Kami</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Menjadi standar emas layanan kecantikan di Tapanuli Utara, di mana profesionalisme bertemu dengan kenyamanan yang hangat dan hasil yang memukau.
             </p>
@@ -77,7 +77,7 @@ export function FeaturedServices() {
           <div className="relative overflow-hidden rounded-[2rem] bg-card border border-accent/40 p-8 md:p-10 transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/10 fade-up animation-delay-200">
             <span className="absolute -top-4 right-6 font-serif text-[7rem] font-bold text-accent/15 select-none">M</span>
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">Misi</p>
-            <h3 className="text-2xl font-serif font-bold text-primary mt-2 mb-4">Misi Kami</h3>
+            <h3 className="text-2xl font-serif font-bold text-accent mt-2 mb-4">Misi Kami</h3>
             <ol className="space-y-3">
               {["Inovasi teknik kecantikan berkelanjutan", "Integritas dalam penggunaan produk", "Membangun kepercayaan melalui hasil nyata"].map((misi, i) => (
                 <li key={i} className="flex gap-4 text-sm text-muted-foreground">

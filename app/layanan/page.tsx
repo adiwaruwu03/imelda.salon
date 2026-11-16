@@ -46,17 +46,17 @@ export default function LayananPage() {
   const { t } = useLanguage()
 
   return (
-    <main className="min-h-screen bg-[#fcf8f1]">
+    <main className="min-h-screen bg-background">
       <Header />
 
       {/* Hero Section - More Compact */}
       <section className="pt-32 pb-16 px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
         
         <div className="max-w-7xl mx-auto text-center relative z-10 space-y-4 animate-fade-in">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/80 border border-primary/20 shadow-sm backdrop-blur-sm">
-            <Diamond className="h-3.5 w-3.5 text-primary" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-primary">{t('hero_badge')}</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-card/80 border border-accent/20 shadow-sm backdrop-blur-sm">
+            <Diamond className="h-3.5 w-3.5 text-accent" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-accent">{t('hero_badge')}</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground">
             {t('services_title')}
@@ -84,7 +84,7 @@ export default function LayananPage() {
               {/* Minimalist Text Content */}
               <div className="space-y-4 text-center px-2">
                 <div className="flex justify-center">
-                  <div className="h-10 w-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
+                  <div className="h-10 w-10 rounded-xl bg-accent/5 flex items-center justify-center text-accent border border-accent/10">
                     <service.icon size={20} />
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default function LayananPage() {
 
                 <div className="flex flex-wrap justify-center gap-1.5 py-1">
                   {service.items.slice(0, 3).map((item, idx) => (
-                    <span key={idx} className="text-[9px] font-bold uppercase tracking-widest text-primary/60">
+                    <span key={idx} className="text-[9px] font-bold uppercase tracking-widest text-accent/60">
                       {item} {idx < 2 && "•"}
                     </span>
                   ))}
@@ -108,7 +108,7 @@ export default function LayananPage() {
                 <div className="pt-6">
                   <Link 
                     href={`/layanan/${service.slug}`} 
-                    className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-primary/20 text-[10px] font-bold uppercase tracking-[0.2em] text-primary transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:shadow-lg hover:shadow-primary/20 group"
+                    className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-accent/20 text-[10px] font-bold uppercase tracking-[0.2em] text-accent transition-all duration-300 hover:bg-primary hover:text-white hover:border-accent hover:shadow-lg hover:shadow-primary/20 group"
                   >
                     View Details 
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -124,21 +124,21 @@ export default function LayananPage() {
       <section className="pb-32 px-6">
         <div className="max-w-5xl mx-auto relative group">
           {/* Decorative Orbs */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-pulse" />
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/30 rounded-full blur-3xl animate-pulse delay-700" />
 
-          <div className="relative z-10 rounded-[3rem] bg-foreground p-12 md:p-20 text-center space-y-10 overflow-hidden shadow-2xl shadow-primary/20">
+          <div className="relative z-10 rounded-[3rem] bg-deep p-12 md:p-20 text-center space-y-10 overflow-hidden shadow-2xl shadow-primary/20">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
             
             <div className="space-y-4 relative z-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
-                <Gem className="h-3.5 w-3.5 text-primary" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/5 border border-white/10 backdrop-blur-sm">
+                <Gem className="h-3.5 w-3.5 text-accent" />
                 <span className="text-[10px] font-bold uppercase tracking-widest text-white/80">Make Your Moment Special</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">
                 {t('services_cta_title')} <br />
-                <span className="text-primary italic">{t('services_cta_title_highlight')}</span>
+                <span className="text-accent italic">{t('services_cta_title_highlight')}</span>
               </h2>
             </div>
 
@@ -151,11 +151,11 @@ export default function LayananPage() {
               </Link>
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-10 w-10 rounded-full border-2 border-foreground bg-secondary flex items-center justify-center overflow-hidden">
+                  <div key={i} className="h-10 w-10 rounded-full border-2 border-deep bg-secondary flex items-center justify-center overflow-hidden">
                     <img src={`/rambut/rambut (${i}).jpeg`} alt="Customer" className="h-full w-full object-cover" />
                   </div>
                 ))}
-                <div className="h-10 px-4 rounded-full border-2 border-foreground bg-white/10 backdrop-blur-md flex items-center justify-center text-[10px] font-bold text-white">
+                <div className="h-10 px-4 rounded-full border-2 border-deep bg-card/10 backdrop-blur-md flex items-center justify-center text-[10px] font-bold text-white">
                   +500 Clients
                 </div>
               </div>

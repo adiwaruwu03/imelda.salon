@@ -97,10 +97,10 @@ export default function ProductDetailPage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-[#fcf8f1]">
+      <main className="min-h-screen bg-background">
         <Header />
         <div className="pt-40 pb-20 flex flex-col items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
           <p className="mt-4 text-muted-foreground">Memuat detail produk...</p>
         </div>
       </main>
@@ -109,12 +109,12 @@ export default function ProductDetailPage() {
 
   if (!product) {
     return (
-      <main className="min-h-screen bg-[#fcf8f1]">
+      <main className="min-h-screen bg-background">
         <Header />
         <div className="pt-40 pb-20 flex flex-col items-center justify-center text-center px-6">
           <h1 className="text-2xl font-bold">Produk tidak ditemukan</h1>
           <p className="mt-2 text-muted-foreground">Maaf, produk yang Anda cari tidak tersedia.</p>
-          <Link href="/shop" className="mt-6 text-primary font-bold underline">Kembali ke Toko</Link>
+          <Link href="/shop" className="mt-6 text-accent font-bold underline">Kembali ke Toko</Link>
         </div>
       </main>
     )
@@ -123,13 +123,13 @@ export default function ProductDetailPage() {
   const images = product.images && product.images.length > 0 ? product.images : ['/rambut/rambut (1).jpeg']
 
   return (
-    <main className="min-h-screen bg-[#fcf8f1]">
+    <main className="min-h-screen bg-background">
       <Header />
 
       <section className="pt-32 pb-24 px-6 lg:px-8 max-w-7xl mx-auto">
         <Link 
           href="/shop" 
-          className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors mb-12"
         >
           <ArrowLeft size={14} /> Back to Shop
         </Link>
@@ -138,14 +138,14 @@ export default function ProductDetailPage() {
           
           {/* Left: Image Gallery */}
           <div className="space-y-6 animate-fade-in">
-            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden bg-white border border-border/30 shadow-2xl shadow-primary/5">
+            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden bg-card border border-border/30 shadow-2xl shadow-primary/5">
               <img 
                 src={images[activeImage]} 
                 alt={product.name} 
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
               />
               <div className="absolute top-8 left-8">
-                <span className="px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-bold uppercase tracking-[0.2em] text-primary shadow-sm border border-primary/10">
+                <span className="px-4 py-1.5 rounded-full bg-card/90 backdrop-blur-md text-[10px] font-bold uppercase tracking-[0.2em] text-accent shadow-sm border border-accent/10">
                   {product.category}
                 </span>
               </div>
@@ -160,7 +160,7 @@ export default function ProductDetailPage() {
                     onClick={() => setActiveImage(idx)}
                     className={cn(
                       "relative h-24 w-24 rounded-2xl overflow-hidden border-2 transition-all",
-                      activeImage === idx ? "border-primary shadow-lg shadow-primary/20 scale-105" : "border-transparent opacity-60 hover:opacity-100"
+                      activeImage === idx ? "border-accent shadow-lg shadow-primary/20 scale-105" : "border-transparent opacity-60 hover:opacity-100"
                     )}
                   >
                     <img src={img} className="h-full w-full object-cover" alt="" />
@@ -175,7 +175,7 @@ export default function ProductDetailPage() {
               <div className="flex items-center gap-2">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={cn("h-4 w-4", i < Math.floor(product.rating || 5) ? "fill-primary text-primary" : "text-border")} />
+                    <Star key={i} className={cn("h-4 w-4", i < Math.floor(product.rating || 5) ? "fill-primary text-accent" : "text-border")} />
                   ))}
                 </div>
                 <span className="text-sm font-bold text-foreground">{product.rating || '5.0'}</span>
@@ -185,7 +185,7 @@ export default function ProductDetailPage() {
                 {product.name}
               </h1>
               
-              <p className="text-3xl font-bold text-primary">
+              <p className="text-3xl font-bold text-accent">
                 Rp {Number(product.price).toLocaleString('id-ID')}
               </p>
             </div>
@@ -197,13 +197,13 @@ export default function ProductDetailPage() {
               
               <div className="grid grid-cols-2 gap-4 border-y border-border/40 py-6">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                  <div className="h-10 w-10 rounded-full bg-accent/5 flex items-center justify-center text-accent">
                     <ShieldCheck size={20} />
                   </div>
                   <span className="text-xs font-bold text-foreground uppercase tracking-widest">100% Original</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                  <div className="h-10 w-10 rounded-full bg-accent/5 flex items-center justify-center text-accent">
                     <Truck size={20} />
                   </div>
                   <span className="text-xs font-bold text-foreground uppercase tracking-widest">Tersedia</span>
@@ -213,17 +213,17 @@ export default function ProductDetailPage() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-6">
-                <div className="flex items-center rounded-full border border-border/50 bg-white p-1">
+                <div className="flex items-center rounded-full border border-border/50 bg-card p-1">
                   <button 
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary/5 text-foreground transition-colors"
+                    className="h-10 w-10 rounded-full flex items-center justify-center hover:bg-accent/5 text-foreground transition-colors"
                   >
                     -
                   </button>
                   <span className="w-12 text-center font-bold">{quantity}</span>
                   <button 
                     onClick={() => setQuantity(quantity + 1)}
-                    className="h-10 w-10 rounded-full flex items-center justify-center hover:bg-primary/5 text-foreground transition-colors"
+                    className="h-10 w-10 rounded-full flex items-center justify-center hover:bg-accent/5 text-foreground transition-colors"
                   >
                     +
                   </button>
@@ -241,7 +241,7 @@ export default function ProductDetailPage() {
                 </Button>
                 <Button 
                   variant="outline"
-                  className="h-16 w-16 rounded-full border-border/50 bg-white hover:bg-primary/5 flex items-center justify-center text-primary transition-all shadow-lg"
+                  className="h-16 w-16 rounded-full border-border/50 bg-card hover:bg-accent/5 flex items-center justify-center text-accent transition-all shadow-lg"
                 >
                   <ShoppingCart size={24} />
                 </Button>

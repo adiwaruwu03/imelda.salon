@@ -29,7 +29,7 @@ export function About() {
               <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">Tentang Kami</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight">
                 Mewujudkan <br />
-                <span className="text-primary italic">Kecantikan Sejati</span>
+                <span className="text-accent italic">Kecantikan Sejati</span>
               </h2>
             </div>
 

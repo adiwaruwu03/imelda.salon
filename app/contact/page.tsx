@@ -51,7 +51,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#fcf8f1]">
+    <main className="min-h-screen bg-background">
       <Header />
 
       <section className="pt-32 pb-20 px-6 lg:px-8 max-w-7xl mx-auto">
@@ -60,29 +60,29 @@ export default function ContactPage() {
           {/* Form Booking */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 shadow-sm backdrop-blur-sm">
-                <Diamond className="h-4 w-4 text-primary" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Reserve Your Spot</span>
+              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 shadow-sm backdrop-blur-sm">
+                <Diamond className="h-4 w-4 text-accent" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">Reserve Your Spot</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground leading-tight">
-                {t('contact_title')} <br /><span className="text-primary italic">{t('contact_title_highlight')}</span>
+                {t('contact_title')} <br /><span className="text-accent italic">{t('contact_title_highlight')}</span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-lg">
                 {t('contact_desc')}
               </p>
             </div>
 
-            <Card className="border-border/50 shadow-2xl shadow-primary/5 bg-white/80 backdrop-blur-md rounded-[2.5rem] overflow-hidden">
+            <Card className="border-border/50 shadow-2xl shadow-primary/5 bg-card/80 backdrop-blur-md rounded-[2.5rem] overflow-hidden">
               <CardContent className="p-8 md:p-12">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">{t('contact_form_name')}</label>
-                      <Input name="name" placeholder="Nama Anda" value={formData.name} onChange={handleChange} className="rounded-2xl h-12 bg-white/50 border-border/50 focus:ring-primary" />
+                      <Input name="name" placeholder="Nama Anda" value={formData.name} onChange={handleChange} className="rounded-2xl h-12 bg-card/50 border-border/50 focus:ring-primary" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">{t('contact_form_phone')}</label>
-                      <Input name="phone" placeholder="08xx..." value={formData.phone} onChange={handleChange} className="rounded-2xl h-12 bg-white/50 border-border/50 focus:ring-primary" />
+                      <Input name="phone" placeholder="08xx..." value={formData.phone} onChange={handleChange} className="rounded-2xl h-12 bg-card/50 border-border/50 focus:ring-primary" />
                     </div>
                   </div>
 
@@ -92,7 +92,7 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full h-12 px-4 rounded-2xl border border-border/50 bg-white/50 text-foreground focus:ring-2 focus:ring-primary outline-none transition-all"
+                      className="w-full h-12 px-4 rounded-2xl border border-border/50 bg-card/50 text-foreground focus:ring-2 focus:ring-primary outline-none transition-all"
                     >
                       <option value="">-- {t('contact_form_service')} --</option>
                       {services.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -102,11 +102,11 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">{t('contact_form_date')}</label>
-                      <Input name="date" type="date" value={formData.date} onChange={handleChange} className="rounded-2xl h-12 bg-white/50 border-border/50 focus:ring-primary" />
+                      <Input name="date" type="date" value={formData.date} onChange={handleChange} className="rounded-2xl h-12 bg-card/50 border-border/50 focus:ring-primary" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground ml-1">{t('contact_form_time')}</label>
-                      <Input name="time" type="time" value={formData.time} onChange={handleChange} className="rounded-2xl h-12 bg-white/50 border-border/50 focus:ring-primary" />
+                      <Input name="time" type="time" value={formData.time} onChange={handleChange} className="rounded-2xl h-12 bg-card/50 border-border/50 focus:ring-primary" />
                     </div>
                   </div>
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
                       value={formData.notes}
                       onChange={handleChange}
                       placeholder="..."
-                      className="w-full px-4 py-3 rounded-2xl border border-border/50 bg-white/50 text-foreground focus:ring-2 focus:ring-primary outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-2xl border border-border/50 bg-card/50 text-foreground focus:ring-2 focus:ring-primary outline-none transition-all resize-none"
                     />
                   </div>
 
@@ -145,7 +145,7 @@ export default function ContactPage() {
                   <a 
                     href="https://www.google.com/maps/place/IMELDA+SALON+KECANTIKAN-GAROGA+%26+TARUTUNG/@2.0216771,99.3032901,17z/data=!3m1!4b1!4m6!3m5!1s0x420aa6d91e906b99:0xc59376dc3990c2c6!8m2!3d2.0216771!4d99.3032901!16s%2Fg%2F11wty2kbwf"
                     target="_blank" 
-                    className="inline-block text-primary font-bold text-sm hover:underline"
+                    className="inline-block text-accent font-bold text-sm hover:underline"
                   >
                     Open in Google Maps
                   </a>
@@ -153,7 +153,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="h-16 w-16 rounded-[1.5rem] bg-white border border-border/50 flex items-center justify-center flex-shrink-0 text-primary shadow-lg">
+                <div className="h-16 w-16 rounded-[1.5rem] bg-card border border-border/50 flex items-center justify-center flex-shrink-0 text-accent shadow-lg">
                   <Clock size={28} />
                 </div>
                 <div className="space-y-2">
@@ -172,7 +172,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="h-16 w-16 rounded-[1.5rem] bg-white border border-border/50 flex items-center justify-center flex-shrink-0 text-primary shadow-lg">
+                <div className="h-16 w-16 rounded-[1.5rem] bg-card border border-border/50 flex items-center justify-center flex-shrink-0 text-accent shadow-lg">
                   <MessageCircle size={28} />
                 </div>
                 <div className="space-y-2">

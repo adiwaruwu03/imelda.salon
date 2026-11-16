@@ -119,11 +119,11 @@ export default function HargaMUATarutung() {
       {/* Breadcrumb */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-8">
         <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-          <Link href="/" className="hover:text-primary transition-colors">
+          <Link href="/" className="hover:text-accent transition-colors">
             Beranda
           </Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href="/blog" className="hover:text-primary transition-colors">
+          <Link href="/blog" className="hover:text-accent transition-colors">
             Blog
           </Link>
           <ChevronRight className="w-4 h-4" />
@@ -134,7 +134,7 @@ export default function HargaMUATarutung() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
         {/* Header Section with Badge */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
             <span>Info Harga Terbaru 2026 </span>
           </div>
@@ -171,7 +171,7 @@ export default function HargaMUATarutung() {
         {/* Konten */}
         <div className="prose prose-lg max-w-none">
           {/* Intro dengan highlight */}
-          <div className="bg-gradient-to-r from-secondary/20 to-transparent p-6 rounded-xl mb-8 border-l-4 border-primary">
+          <div className="bg-gradient-to-r from-secondary/20 to-transparent p-6 rounded-xl mb-8 border-l-4 border-accent">
             <p className="text-foreground leading-relaxed m-0">
               Menentukan Makeup Artist (MUA) pengantin adalah bagian penting dalam
               persiapan pernikahan. Harga jasa MUA di Tarutung bervariasi tergantung
@@ -183,7 +183,7 @@ export default function HargaMUATarutung() {
           {/* Harga Packages */}
 <section className="mb-16">
   <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
-    <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+    <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center">
       💰
     </span>
     Kisaran Harga MUA Pengantin Tarutung <br />dengan harga terjangkau
@@ -237,7 +237,7 @@ export default function HargaMUATarutung() {
           key={index}
           className={`relative group bg-card rounded-2xl border ${
             pkg.popular
-              ? "border-primary shadow-lg shadow-primary/10"
+              ? "border-accent shadow-lg shadow-primary/10"
               : "border-border"
           } overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
         >
@@ -252,7 +252,7 @@ export default function HargaMUATarutung() {
               {pkg.title}
             </h3>
 
-            <p className="text-2xl font-bold text-primary mb-4">
+            <p className="text-2xl font-bold text-accent mb-4">
               {pkg.price}
             </p>
 
@@ -288,7 +288,7 @@ export default function HargaMUATarutung() {
           {/* Faktor yang Mempengaruhi Harga */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
-              <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+              <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center">
                 📊
               </span>
               Faktor yang Mempengaruhi Harga
@@ -298,9 +298,9 @@ export default function HargaMUATarutung() {
               {factors.map((factor, index) => {
                 const Icon = factor.icon
                 return (
-                  <div key={index} className="flex gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/20 transition-colors">
+                  <div key={index} className="flex gap-4 p-4 bg-card rounded-xl border border-border hover:border-accent/20 transition-colors">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-accent/10 text-accent rounded-lg flex items-center justify-center">
                         <Icon className="w-6 h-6" />
                       </div>
                     </div>
@@ -317,7 +317,7 @@ export default function HargaMUATarutung() {
           {/* Tips Memilih MUA */}
           <section className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
-              <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+              <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center">
                 💡
               </span>
               Tips Memilih MUA Pengantin
@@ -327,7 +327,7 @@ export default function HargaMUATarutung() {
               {tips.map((tip) => {
                 const Icon = tip.icon
                 return (
-                  <div key={tip.number} className="flex gap-4 p-5 bg-card rounded-xl border border-border hover:border-primary/20 transition-all group">
+                  <div key={tip.number} className="flex gap-4 p-5 bg-card rounded-xl border border-border hover:border-accent/20 transition-all group">
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent text-white rounded-xl flex items-center justify-center font-bold text-lg">
                         {tip.number}
@@ -335,7 +335,7 @@ export default function HargaMUATarutung() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <Icon className="w-5 h-5 text-primary" />
+                        <Icon className="w-5 h-5 text-accent" />
                         <h3 className="font-semibold text-foreground">{tip.title}</h3>
                       </div>
                       <p className="text-muted-foreground text-sm">{tip.description}</p>
@@ -359,28 +359,28 @@ export default function HargaMUATarutung() {
             
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground">10+ Tahun Pengalaman</h3>
                   <p className="text-sm text-muted-foreground">Melayani 500+ pasangan pengantin</p>
                 </div>
               </div>
               <div className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground">Produk Premium</h3>
                   <p className="text-sm text-muted-foreground">Makeup tahan lama & aman di kulit</p>
                 </div>
               </div>
               <div className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground">Tim Profesional</h3>
                   <p className="text-sm text-muted-foreground">Bersertifikasi & update tren terbaru</p>
                 </div>
               </div>
               <div className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-foreground">Gratis Konsultasi</h3>
                   <p className="text-sm text-muted-foreground">Diskusikan konsep makeup impian Anda</p>
@@ -390,14 +390,14 @@ export default function HargaMUATarutung() {
           </section>
 
           {/* CTA Section */}
-          <div className="py-20 bg-white text-primary-blue">
+          <div className="py-20 bg-card text-primary-blue">
             
-            <div className="relative p-8 md:p-10 text-center text-black">
+            <div className="relative p-8 md:p-10 text-center text-foreground">
               <h3 className="font-bold text-2xl md:text-3xl mb-3">
                 Booking MUA Pengantin Sekarang
               </h3>
 
-              <p className="text-black/90 mb-6 max-w-xl mx-auto">
+              <p className="text-foreground mb-6 max-w-xl mx-auto">
                 Wujudkan penampilan pengantin terbaik Anda bersama tim profesional Imelda Salon Tarutung.
                 Konsultasi gratis & jadwalkan hari spesial Anda sekarang.
               </p>
@@ -405,7 +405,7 @@ export default function HargaMUATarutung() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/layanan/mua-pengantin-tarutung"
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-accent rounded-xl font-semibold hover:bg-card/90 transition-all transform hover:scale-105 shadow-lg"
                 >
                   Lihat Paket Layanan
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -414,7 +414,7 @@ export default function HargaMUATarutung() {
                 <a
                   href="https://wa.me/6282285310686"
                   target="_blank"
-                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
+                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-accent rounded-xl font-semibold hover:bg-card/90 transition-all transform hover:scale-105 shadow-lg"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Chat WhatsApp
@@ -426,7 +426,7 @@ export default function HargaMUATarutung() {
           {/* Artikel Terkait */}
           <div className="mt-12 p-6 bg-card rounded-xl border border-border">
             <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-              <span className="w-6 h-6 bg-primary/10 text-primary rounded flex items-center justify-center text-sm">
+              <span className="w-6 h-6 bg-accent/10 text-accent rounded flex items-center justify-center text-sm">
                 📖
               </span>
               Baca Juga:
@@ -435,18 +435,18 @@ export default function HargaMUATarutung() {
               <li>
                 <Link 
                   href="/blog/tips-hairdo-pengantin"
-                  className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                  className="group flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
                 >
-                  <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
                   <span>Tips Hairdo Pengantin Agar Tahan Seharian</span>
                 </Link>
               </li>
               <li>
                 <Link 
                   href="/blog/inspirasi-makeup-wisuda"
-                  className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                  className="group flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
                 >
-                  <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
                   <span>Inspirasi Makeup Wisuda Natural & Elegan</span>
                 </Link>
               </li>

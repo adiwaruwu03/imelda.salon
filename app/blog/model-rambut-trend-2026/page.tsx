@@ -93,11 +93,11 @@ export default function Page() {
       {/* Breadcrumb */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-8">
         <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-          <Link href="/" className="hover:text-primary transition-colors">
+          <Link href="/" className="hover:text-accent transition-colors">
             Beranda
           </Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href="/blog" className="hover:text-primary transition-colors">
+          <Link href="/blog" className="hover:text-accent transition-colors">
             Blog
           </Link>
           <ChevronRight className="w-4 h-4" />
@@ -157,7 +157,7 @@ export default function Page() {
         {/* TRENDS SECTION - REDESIGNED */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
-            <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-lg">
+            <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg">
               💇‍♀️
             </span>
             Inspirasi Model Rambut Trend 2026
@@ -179,7 +179,7 @@ export default function Page() {
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-lg">
+                    <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-lg">
                       {trend.icon}
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function Page() {
                   {/* Content */}
                   <div className="p-6 md:p-8">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-sm text-primary font-medium">Trend #{trend.id}</span>
+                      <span className="text-sm text-accent font-medium">Trend #{trend.id}</span>
                       <span className="w-1 h-1 bg-primary rounded-full"></span>
                       <span className="text-sm text-muted-foreground">2026</span>
                     </div>
@@ -202,13 +202,13 @@ export default function Page() {
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-muted-foreground">
                           <span className="font-medium text-foreground">Cocok untuk:</span> {trend.suitableFor}
                         </span>
                       </div>
                       <div className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-muted-foreground">
                           <span className="font-medium text-foreground">Perawatan:</span> {trend.maintenance}
                         </span>
@@ -225,7 +225,7 @@ export default function Page() {
           <br />
 
           {/* Intro dengan highlight */}
-        <div className="bg-gradient-to-r from-secondary/20 to-transparent p-6 rounded-xl mb-10 border-l-4 border-primary">
+        <div className="bg-gradient-to-r from-secondary/20 to-transparent p-6 rounded-xl mb-10 border-l-4 border-accent">
           <p className="text-foreground leading-relaxed">
             Tahun 2026 IMELDA SALON menghadirkan banyak tren model rambut wanita yang fresh,
             stylish, dan tetap mudah dirawat. Mulai dari rambut pendek modern
@@ -238,7 +238,7 @@ export default function Page() {
         {/* TIPS FROM STYLIST */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
-            <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-lg">
+            <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg">
               💡
             </span>
             Tips Memilih Model Rambut dari Stylist
@@ -250,11 +250,11 @@ export default function Page() {
               return (
                 <div 
                   key={index}
-                  className="p-5 bg-card rounded-xl border border-border hover:border-primary/20 hover:shadow-md transition-all group"
+                  className="p-5 bg-card rounded-xl border border-border hover:border-accent/20 hover:shadow-md transition-all group"
                 >
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0">
-                      <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <div className="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                         <Icon className="w-5 h-5" />
                       </div>
                     </div>
@@ -272,7 +272,7 @@ export default function Page() {
         {/* TREND COMPARISON */}
         <section className="mb-16 p-6 md:p-8 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-2xl border border-border">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-            <span className="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-lg">
+            <span className="w-8 h-8 bg-accent/10 text-accent rounded-lg flex items-center justify-center text-lg">
               📊
             </span>
             Perbandingan Model Rambut
@@ -322,14 +322,14 @@ export default function Page() {
         <div className="relative overflow-hidden rounded-2xl mb-12">
          
           
-          <div className="relative p-8 md:p-10 text-center text-black">
-            <Scissors className="w-16 h-16 mx-auto mb-4 text-black/80" />
+          <div className="relative p-8 md:p-10 text-center text-foreground">
+            <Scissors className="w-16 h-16 mx-auto mb-4 text-foreground" />
             
             <h3 className="text-2xl md:text-3xl font-bold mb-3">
               Mau Coba Model Rambut Trend 2026?
             </h3>
 
-            <p className="text-black/90 mb-6 max-w-xl mx-auto">
+            <p className="text-foreground mb-6 max-w-xl mx-auto">
               Tim stylist Imelda Salon siap bantu pilih model rambut
               sesuai bentuk wajah & karakter kamu. Gratis konsultasi!
             </p>
@@ -337,7 +337,7 @@ export default function Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 href="/layanan/potong-styling-rambut-tarutung"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-accent rounded-xl font-semibold hover:bg-card/90 transition-all transform hover:scale-105 shadow-lg"
               >
                 <Wand2 className="w-5 h-5" />
                 Lihat Layanan Haircut
@@ -347,7 +347,7 @@ export default function Page() {
               <a
                 href="https://wa.me/6282285310686"
                 target="_blank"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-accent rounded-xl font-semibold hover:bg-card/90 transition-all transform hover:scale-105 shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" />
                 Konsultasi WhatsApp
@@ -371,7 +371,7 @@ export default function Page() {
         {/* ARTIKEL TERKAIT */}
         <div className="mt-12 p-6 bg-card rounded-xl border border-border">
           <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-            <span className="w-6 h-6 bg-primary/10 text-primary rounded flex items-center justify-center text-sm">
+            <span className="w-6 h-6 bg-accent/10 text-accent rounded flex items-center justify-center text-sm">
               📖
             </span>
             Baca Juga:
@@ -380,18 +380,18 @@ export default function Page() {
             <li>
               <Link 
                 href="/blog/tips-hairdo-pengantin"
-                className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="group flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
               >
-                <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
                 <span>Tips Hairdo Pengantin Agar Tahan Seharian</span>
               </Link>
             </li>
             <li>
               <Link 
                 href="/blog/inspirasi-makeup-wisuda"
-                className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="group flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
               >
-                <ChevronRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
                 <span>Inspirasi Makeup Wisuda Natural & Elegan</span>
               </Link>
             </li>
@@ -402,7 +402,7 @@ export default function Page() {
         <div className="text-center pt-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all group"
+            className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Kembali ke Blog

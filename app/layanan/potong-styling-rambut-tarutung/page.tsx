@@ -27,19 +27,19 @@ export default function PotongRambutPage() {
   const { t, language } = useLanguage()
 
   return (
-    <main className="min-h-screen bg-[#fcf8f1]">
+    <main className="min-h-screen bg-background">
       <Header />
 
       {/* ================= HERO SECTION ================= */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-primary/5 rounded-full blur-[100px]" />
+          <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-accent/5 rounded-full blur-[100px]" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10 text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-primary/20 shadow-sm backdrop-blur-sm animate-fade-in">
-            <Scissors className="h-4 w-4 text-primary" />
-            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary">Luxury Hair Service</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 border border-accent/20 shadow-sm backdrop-blur-sm animate-fade-in">
+            <Scissors className="h-4 w-4 text-accent" />
+            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-accent">Luxury Hair Service</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground leading-tight animate-fade-up">
@@ -68,7 +68,7 @@ export default function PotongRambutPage() {
       </section>
 
       {/* ================= DESKRIPSI SECTION ================= */}
-      <section className="py-24 px-6 bg-white/50 backdrop-blur-sm">
+      <section className="py-24 px-6 bg-card/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             
@@ -85,7 +85,7 @@ export default function PotongRambutPage() {
               <div className="grid grid-cols-2 gap-4 pt-4">
                 {['Professional Stylist', 'Sterile Tools', 'Affordable Price', 'No Queue'].map((f, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    <CheckCircle2 className="h-5 w-5 text-accent" />
                     <span className="text-sm font-bold text-foreground/80">{f}</span>
                   </div>
                 ))}
@@ -132,8 +132,8 @@ export default function PotongRambutPage() {
               { title: "Creambath & Hair Spa", price: "Rp 50k – 100k", icon: "🧖‍♀️", popular: false }
             ].map((item, i) => (
               <div key={i} className={cn(
-                "relative p-8 rounded-[2.5rem] bg-white shadow-xl transition-all hover:-translate-y-2 group",
-                item.popular ? "border-2 border-primary" : "border border-border/50"
+                "relative p-8 rounded-[2.5rem] bg-card shadow-xl transition-all hover:-translate-y-2 group",
+                item.popular ? "border-2 border-accent" : "border border-border/50"
               )}>
                 {item.popular && (
                   <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">
@@ -143,14 +143,14 @@ export default function PotongRambutPage() {
                 <div className="text-center space-y-6 flex flex-col h-full">
                   <div className="text-4xl">{item.icon}</div>
                   <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-                  <div className="py-3 px-6 rounded-2xl bg-primary/5 text-primary font-bold text-lg">
+                  <div className="py-3 px-6 rounded-2xl bg-accent/5 text-accent font-bold text-lg">
                     {item.price}
                   </div>
                   <Button 
                     onClick={() => handleWhatsApp(item.title, item.price, language)}
                     className={cn(
                       "mt-auto w-full h-12 rounded-full font-bold transition-all",
-                      item.popular ? "bg-primary text-white" : "variant-outline border-primary text-primary hover:bg-primary hover:text-white"
+                      item.popular ? "bg-primary text-white" : "bg-transparent border border-accent text-accent hover:bg-primary hover:text-white"
                     )}
                   >
                     <MessageCircle className="mr-2 h-4 w-4" />
@@ -165,12 +165,12 @@ export default function PotongRambutPage() {
 
       {/* ================= CTA ================= */}
       <section className="py-24 px-6 text-center">
-        <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[3rem] bg-foreground text-white space-y-8 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto p-12 md:p-20 rounded-[3rem] bg-deep text-white space-y-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-50" />
           <div className="relative z-10 space-y-4">
             <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">
               {t('services_cta_title')} <br />
-              <span className="text-primary italic">{t('services_cta_title_highlight')}</span>
+              <span className="text-accent italic">{t('services_cta_title_highlight')}</span>
             </h2>
             <p className="text-white/60 text-lg max-w-lg mx-auto">
               {t('hero_desc')}
@@ -191,4 +191,4 @@ export default function PotongRambutPage() {
     </main>
   )
 }
-
+

@@ -29,9 +29,9 @@ export default function HairdoWeddingPage() {
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-secondary/50 via-background to-secondary/30 py-24 sm:py-32">
         {/* Decorative Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-20 left-0 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
+          <div className="absolute top-20 left-0 h-72 w-72 rounded-full bg-accent/5 blur-3xl" />
           <div className="absolute bottom-20 right-0 h-72 w-72 rounded-full bg-secondary/40 blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-accent/5 blur-3xl" />
         </div>
 
 {/* Wedding Decoration Pattern Image */}
@@ -78,7 +78,7 @@ export default function HairdoWeddingPage() {
               <span className="bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
                 Hairdo Wedding
               </span>
-              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">
+              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/80">
                 Tarutung
               </span>
             </h1>
@@ -114,19 +114,19 @@ export default function HairdoWeddingPage() {
             {/* Trust Badges */}
             <div className="flex flex-wrap items-center justify-center gap-6 pt-12 text-sm text-muted-foreground border-t border-border/50">
               <div className="flex items-center gap-2">
-                <span className="text-primary">✓</span>
+                <span className="text-accent">✓</span>
                 <span>50+ Wedding</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-primary">✓</span>
+                <span className="text-accent">✓</span>
                 <span>Stylist Berpengalaman</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-primary">✓</span>
+                <span className="text-accent">✓</span>
                 <span>Tahan Lama 12 Jam</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-primary">✓</span>
+                <span className="text-accent">✓</span>
                 <span>Home Service</span>
               </div>
             </div>
@@ -140,14 +140,14 @@ export default function HairdoWeddingPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
                 <span className="text-lg">👰</span>
                 Wedding Hair Expert
               </div>
               
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                 Jasa Hairdo Wedding Terbaik 
-                <span className="block text-primary mt-2">di Tarutung</span>
+                <span className="block text-accent mt-2">di Tarutung</span>
               </h2>
 
               <div className="space-y-6 text-muted-foreground leading-relaxed">
@@ -175,8 +175,8 @@ export default function HairdoWeddingPage() {
                   "Harga Terjangkau"
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center">
-                      <svg className="h-3 w-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="h-5 w-5 rounded-full bg-accent/10 flex items-center justify-center">
+                      <svg className="h-3 w-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
@@ -247,7 +247,7 @@ export default function HairdoWeddingPage() {
 
     {/* Heading */}
     <div className="text-center space-y-4 mb-12">
-      <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+      <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
         <span>💕</span>
         Pilihan Lengkap
       </span>
@@ -297,7 +297,7 @@ export default function HairdoWeddingPage() {
         <div
           key={i}
           className={`
-            group relative rounded-2xl bg-white p-8 shadow-lg
+            group relative rounded-2xl bg-card p-8 shadow-lg
             hover:-translate-y-2 hover:shadow-xl transition-all duration-300
             ${item.popular ? 'ring-2 ring-primary' : 'border border-border/60'}
           `}
@@ -326,7 +326,7 @@ export default function HairdoWeddingPage() {
             {item.features.map((feature, idx) => (
               <div key={idx} className="flex items-center gap-2 text-sm">
                 <svg
-                  className="h-4 w-4 text-primary"
+                  className="h-4 w-4 text-accent"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -347,7 +347,7 @@ export default function HairdoWeddingPage() {
           <div className="pt-4 border-t border-border/50 space-y-4">
             <div>
               <p className="text-sm text-muted-foreground mb-1">Harga</p>
-              <p className="text-2xl font-bold text-primary">
+              <p className="text-2xl font-bold text-accent">
                 {item.price}
               </p>
             </div>
@@ -374,7 +374,7 @@ export default function HairdoWeddingPage() {
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               ✨ Why Us
             </span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -426,7 +426,7 @@ export default function HairdoWeddingPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 border border-border/50"
+                className="group relative overflow-hidden rounded-2xl bg-card p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 border border-border/50"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <div className="relative">
@@ -448,7 +448,7 @@ export default function HairdoWeddingPage() {
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               📋 Proses
             </span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -467,7 +467,7 @@ export default function HairdoWeddingPage() {
               { step: "4", title: "Hairdo Wedding", desc: "Tampil cantik di hari spesial", icon: "👰" }
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-border/50 text-center group hover:-translate-y-1">
+                <div className="relative bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-border/50 text-center group hover:-translate-y-1">
                   <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
                     {item.step}
                   </div>
@@ -492,7 +492,7 @@ export default function HairdoWeddingPage() {
       <section className="py-20 sm:py-24 bg-gradient-to-b from-secondary/30 to-background">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
               💬 Testimoni
             </span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -520,12 +520,12 @@ export default function HairdoWeddingPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group relative rounded-2xl bg-white p-6 shadow-lg hover:shadow-xl transition-all border border-border/50"
+                className="group relative rounded-2xl bg-card p-6 shadow-lg hover:shadow-xl transition-all border border-border/50"
               >
                 <div className="absolute top-4 right-4 text-6xl opacity-5">"</div>
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(item.rating)].map((_, idx) => (
-                    <svg key={idx} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={idx} className="h-5 w-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
@@ -567,7 +567,7 @@ export default function HairdoWeddingPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6">
             {/* Icon */}
-            <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-white/10 text-white backdrop-blur-sm ring-4 ring-white/20">
+            <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-card/10 text-white backdrop-blur-sm ring-4 ring-white/20">
               <span className="text-4xl">💇‍♀️</span>
             </div>
 
@@ -584,7 +584,7 @@ export default function HairdoWeddingPage() {
                 <Button 
                   variant="secondary" 
                   size="lg"
-                  className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 shadow-xl hover:shadow-2xl transition-all"
+                  className="w-full sm:w-auto bg-card text-accent hover:bg-card/90 shadow-xl hover:shadow-2xl transition-all"
                 >
                   Hubungi Kami
                 </Button>
@@ -593,7 +593,7 @@ export default function HairdoWeddingPage() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="w-full sm:w-auto bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white transition-all"
+                  className="w-full sm:w-auto bg-transparent text-white border-white/30 hover:bg-card/10 hover:text-white transition-all"
                 >
                   Lihat Pricelist
                 </Button>

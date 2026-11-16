@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Palet: maroon #5A1120, deep #3B0913, cream #F3E6D3, ivory #FAF4EB, gold #C5A14A */
-  --background: #f3e6d3;
-  --foreground: #2a080f;
-  --card: #faf4eb;
-  --card-foreground: #2a080f;
-  --popover: #faf4eb;
-  --popover-foreground: #2a080f;
-  --primary: #5a1120;
+  /* Palet: maroon #5A1120 (latar), deep #3B0913, cream #FAF4EB (teks), gold #C5A14A (aksen), hijau pandan #4C8C4A (aksi) */
+  --background: #5a1120;
+  --foreground: #faf4eb;
+  --card: #470c19;
+  --card-foreground: #faf4eb;
+  --popover: #470c19;
+  --popover-foreground: #faf4eb;
+  --primary: #4c8c4a;
   --primary-foreground: #faf4eb;
   --deep: #3b0913;
-  --secondary: #ead8bf;
-  --secondary-foreground: #5a1120;
-  --muted: #ecdcc6;
-  --muted-foreground: #6e4a4f;
+  --secondary: #4f0e1c;
+  --secondary-foreground: #faf4eb;
+  --muted: #6b1a2b;
+  --muted-foreground: #e6d3c0;
   --accent: #c5a14a;
   --accent-foreground: #2a080f;
   --destructive: oklch(0.6 0.18 25);
   --destructive-foreground: #ffffff;
-  --border: #dcc5a4;
-  --input: #ecdcc6;
+  --border: #7d2a3a;
+  --input: #470c19;
   --ring: #c5a14a;
   --radius: 0.75rem;
   

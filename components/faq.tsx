@@ -32,7 +32,7 @@ export function FAQ() {
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="font-sans text-[11px] font-bold uppercase tracking-[0.3em] text-accent">FAQ</h2>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground">Pertanyaan <span className="text-primary italic">Populer</span></h3>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground">Pertanyaan <span className="text-accent italic">Populer</span></h3>
         </div>
 
         <Accordion type="single" collapsible className="w-full space-y-4">
@@ -42,7 +42,7 @@ export function FAQ() {
               value={`item-${i}`}
               className="overflow-hidden border border-accent/30 rounded-2xl bg-card transition-all duration-300 last:border-b data-[state=open]:border-primary data-[state=open]:shadow-lg data-[state=open]:shadow-primary/10"
             >
-              <AccordionTrigger className="px-6 py-5 rounded-none text-lg font-bold text-foreground hover:no-underline hover:text-primary transition-colors duration-300 data-[state=open]:bg-primary data-[state=open]:text-primary-foreground [&>svg]:size-5 [&>svg]:text-accent">
+              <AccordionTrigger className="px-6 py-5 rounded-none text-lg font-bold text-foreground hover:no-underline hover:text-accent transition-colors duration-300 data-[state=open]:bg-primary data-[state=open]:text-primary-foreground [&>svg]:size-5 [&>svg]:text-accent">
                 {faq.q}
               </AccordionTrigger>
               <AccordionContent className="px-6 pt-5 text-muted-foreground text-base md:text-lg leading-relaxed pb-6">
