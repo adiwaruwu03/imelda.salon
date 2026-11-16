@@ -1,33 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fcf8f1;
-  --foreground: #231d18;
-  --card: #ffffff;
-  --card-foreground: #231d18;
-  --popover: #ffffff;
-  --popover-foreground: #231d18;
-  --primary: #c7a56a;
-  --primary-foreground: #ffffff;
-  --secondary: #f2eadf;
-  --secondary-foreground: #231d18;
-  --muted: #f4ede3;
-  --muted-foreground: #786d60;
-  --accent: #c7a56a;
-  --accent-foreground: #ffffff;
+  /* Palet: maroon #5A1120, deep #3B0913, cream #F3E6D3, ivory #FAF4EB, gold #C5A14A */
+  --background: #f3e6d3;
+  --foreground: #2a080f;
+  --card: #faf4eb;
+  --card-foreground: #2a080f;
+  --popover: #faf4eb;
+  --popover-foreground: #2a080f;
+  --primary: #5a1120;
+  --primary-foreground: #faf4eb;
+  --deep: #3b0913;
+  --secondary: #ead8bf;
+  --secondary-foreground: #5a1120;
+  --muted: #ecdcc6;
+  --muted-foreground: #6e4a4f;
+  --accent: #c5a14a;
+  --accent-foreground: #2a080f;
   --destructive: oklch(0.6 0.18 25);
   --destructive-foreground: #ffffff;
-  --border: #e6dbcb;
-  --input: #f4ede3;
-  --ring: #c7a56a;
+  --border: #dcc5a4;
+  --input: #ecdcc6;
+  --ring: #c5a14a;
   --radius: 0.75rem;
   
-  --font-sans: 'Poppins', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: var(--font-jakarta), sans-serif;
+  --font-serif: var(--font-playfair), serif;
 }
 
 .dark {
@@ -61,6 +62,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-deep: var(--deep);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -165,8 +167,26 @@
   animation: testimonial-scroll-up 58s linear infinite;
 }
 
-.hero-glow-bg {
-  background: 
-    radial-gradient(circle at 50% 50%, rgba(199, 165, 106, 0.1), transparent 50%),
-    linear-gradient(180deg, #fcf8f1 0%, #fdf6ec 100%);
+
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 30s linear infinite; }
+
+/* Reveal saat scroll (dipicu IntersectionObserver di featured-services) */
+.fade-up, .scale-in, .slide-in-right {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.fade-up { transform: translateY(30px); }
+.scale-in { transform: scale(0.95); }
+.slide-in-right { transform: translateX(30px); }
+.animate-in { opacity: 1 !important; transform: none !important; }
+.animation-delay-200 { transition-delay: 200ms; }
+.animation-delay-400 { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none; }
+  .fade-up, .scale-in, .slide-in-right { opacity: 1; transform: none; transition: none; }
 }

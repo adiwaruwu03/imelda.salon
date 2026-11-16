@@ -1,6 +1,6 @@
 'use client'
 
-import { Star, Quote } from 'lucide-react'
+import { Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/lib/language-context'
 
@@ -35,22 +35,13 @@ const testimonials = [
 ]
 
 export function Testimonials() {
-  const { t, language } = useLanguage()
+  const { language } = useLanguage()
   
-  const testimonialColumns = [
-    [testimonials[0], testimonials[2], testimonials[0]],
-    [testimonials[1], testimonials[0], testimonials[2]],
-    [testimonials[2], testimonials[1], testimonials[0]],
-  ]
-
   return (
-    <section className="py-24 bg-secondary/30 overflow-hidden relative">
+    <section className="py-24 md:py-28 bg-secondary/40 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16 relative z-10">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-            <Quote className="h-3 w-3 text-primary" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Testimonials</span>
-          </div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">Testimonials</p>
           <h3 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
             {language === 'id' ? 'Apa Kata ' : 'What '} <span className="text-primary italic">{language === 'id' ? 'Mereka?' : 'They Say?'}</span>
           </h3>
@@ -61,49 +52,41 @@ export function Testimonials() {
           </p>
         </div>
 
-        <div className="relative h-[40rem] md:h-[35rem] gap-6 md:grid md:grid-cols-3">
-          {/* Overlay untuk efek fade atas-bawah */}
-          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-secondary/30 to-transparent z-10" />
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-secondary/30 to-transparent z-10" />
-
-          {testimonialColumns.map((column, columnIndex) => (
-            <div key={`column-${columnIndex}`} className={cn(
-              "relative overflow-hidden h-full",
-              columnIndex === 0 ? "block" : "hidden md:block"
-            )}>
-              <div className={cn(
-                columnIndex === 1 ? "animate-testimonial-up" : "animate-testimonial-down",
-                "space-y-6"
-              )}>
-                {[...column, ...column].map((t, i) => (
-                  <div 
-                    key={`${columnIndex}-${i}`} 
-                    className="bg-white p-8 rounded-[2rem] shadow-xl shadow-primary/5 border border-primary/5 group transition-all duration-500"
-                  >
-                    <div className="space-y-6">
-                      <div className="flex gap-1">
-                        {[...Array(t.rating)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                        ))}
-                      </div>
-                      <p className="text-base text-muted-foreground leading-relaxed italic">
-                        "{language === 'id' ? t.content.id : t.content.en}"
-                      </p>
-                      <div className="flex items-center gap-4">
-                        <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
-                          {t.name[0]}
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-foreground text-sm">{t.name}</h4>
-                          <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">{t.role}</p>
-                        </div>
-                      </div>
+        <div className="grid md:grid-cols-3 gap-6 md:items-start">
+          {testimonials.map((item, i) => {
+            const hl = i === 1
+            return (
+              <div key={item.name} className={cn('fade-up', i === 1 && 'md:mt-12 animation-delay-200', i === 2 && 'md:mt-4 animation-delay-400')}>
+                <figure
+                  className={cn(
+                    'relative overflow-hidden p-8 rounded-[2rem] transition duration-300 ease-out hover:-translate-y-1',
+                    hl ? 'bg-primary text-primary-foreground shadow-2xl shadow-primary/30' : 'bg-card border border-accent/40 shadow-lg shadow-primary/5'
+                  )}
+                >
+                  <span aria-hidden className={cn('absolute -top-6 right-4 font-serif text-[9rem] leading-none select-none', hl ? 'text-accent/20' : 'text-primary/10')}>&rdquo;</span>
+                  <div className="relative space-y-6">
+                    <div className="flex gap-1">
+                      {[...Array(item.rating)].map((_, k) => (
+                        <Star key={k} className="h-4 w-4 fill-accent text-accent" />
+                      ))}
                     </div>
+                    <blockquote className={cn('text-base leading-relaxed italic', hl ? 'text-primary-foreground/90' : 'text-muted-foreground')}>
+                      &ldquo;{language === 'id' ? item.content.id : item.content.en}&rdquo;
+                    </blockquote>
+                    <figcaption className="flex items-center gap-4">
+                      <div className={cn('h-10 w-10 rounded-full flex items-center justify-center font-serif font-bold', hl ? 'bg-accent text-accent-foreground' : 'bg-primary text-accent')}>
+                        {item.name[0]}
+                      </div>
+                      <div>
+                        <p className="font-bold text-sm">{item.name}</p>
+                        <p className={cn('text-[10px] font-bold uppercase tracking-widest', hl ? 'text-accent' : 'text-muted-foreground')}>{item.role}</p>
+                      </div>
+                    </figcaption>
                   </div>
-                ))}
+                </figure>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

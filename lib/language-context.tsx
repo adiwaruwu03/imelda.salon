@@ -35,7 +35,7 @@ const translations = {
     hero_badge: 'Luxury Salon Experience',
     hero_title_1: 'Pancarkan Pesona',
     hero_title_2: 'Terbaik Anda',
-    hero_desc: 'Sentuhan artistik dari para profesional untuk merayakan setiap momen berharga Anda dengan kemewahan yang personal.',
+    hero_desc: 'Rayakan setiap momen berharga Anda dengan datang ke Imelda Salon.',
     hero_booking: 'Booking Sekarang',
     hero_see_services: 'Lihat Layanan',
     
@@ -111,7 +111,7 @@ const translations = {
     hero_badge: 'Luxury Salon Experience',
     hero_title_1: 'Radiate Your',
     hero_title_2: 'Best Charm',
-    hero_desc: 'Artistic touch from professionals to celebrate every precious moment with personalized luxury.',
+    hero_desc: 'Celebrate every precious moment of yours by visiting Imelda Salon.',
     hero_booking: 'Book Now',
     hero_see_services: 'View Services',
     

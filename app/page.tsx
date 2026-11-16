@@ -1,5 +1,6 @@
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
+import { SignatureServices } from '@/components/signature-services'
 import { FeaturedServices } from '@/components/featured-services'
 import { About } from '@/components/about'
 import { Testimonials } from '@/components/testimonials'
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <Hero />
+      <SignatureServices />
       <FeaturedServices />
       <About />
       <Testimonials />
