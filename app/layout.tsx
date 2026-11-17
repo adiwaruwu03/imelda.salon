@@ -1,11 +1,12 @@
 import React from "react"
 import type { Metadata } from "next"
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google"
+import { Plus_Jakarta_Sans, Playfair_Display, Great_Vibes } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" })
 const playfair = Playfair_Display({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-playfair" })
+const script = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "--font-greatvibes" })
 
 export const metadata: Metadata = {
   // ✅ TITLE SEO LOKAL KUAT
@@ -73,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="id" className={`${jakarta.variable} ${playfair.variable}`}>
+    <html lang="id" className={`${jakarta.variable} ${playfair.variable} ${script.variable}`}>
       <body className="font-sans antialiased pb-24 md:pb-0">
         <LanguageProvider>
           {children}

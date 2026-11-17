@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { Calendar, Clock, User, ChevronRight, BookOpen, Sparkles, TrendingUp } from 'lucide-react'
+import { ArrowRight, MessageCircle } from 'lucide-react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { PromoMarquee } from '@/components/promo-marquee'
+import { Bow, Sprig, SectionTitle, Divider } from '@/components/ornaments'
 
 export const metadata = {
   title: 'Blog Imelda Salon - Tips Kecantikan & Makeup Tarutung',
@@ -15,21 +16,19 @@ const articles = [
     title: 'Tips Hairdo Pengantin Agar Tahan Seharian',
     slug: '/blog/tips-hairdo-pengantin',
     image: '/rambut/rambut (1).jpeg',
-    excerpt: 'Pelajari rahasia tatanan rambut pengantin yang tetap elegan dan kokoh sepanjang hari pernikahan Anda.',
+    excerpt: 'Rahasia tatanan rambut pengantin yang tetap elegan dan kokoh dari akad sampai resepsi selesai.',
     category: 'Hairdo',
     readTime: '5 menit',
     date: '15 Jan 2024',
-    author: 'Melda Pasaribu',
   },
   {
     title: 'Panduan Memilih MUA Pengantin di Tarutung',
     slug: '/blog/harga-mua-tarutung',
     image: '/album/Pengantin.jpg',
-    excerpt: 'Jangan salah pilih! Berikut adalah poin penting saat memilih makeup artist untuk hari bahagia Anda.',
+    excerpt: 'Jangan salah pilih! Poin penting saat memilih makeup artist untuk hari bahagiamu, lengkap dengan kisaran harga.',
     category: 'Makeup',
     readTime: '4 menit',
     date: '10 Jan 2024',
-    author: 'Tim Imelda',
   },
   {
     title: 'Inspirasi Makeup Wisuda: Natural vs Glam',
@@ -39,87 +38,111 @@ const articles = [
     category: 'Makeup',
     readTime: '6 menit',
     date: '5 Jan 2024',
-    author: 'Tim Imelda',
+  },
+  {
+    title: 'Model Rambut Wanita Trend 2026',
+    slug: '/blog/model-rambut-trend-2026',
+    image: '/poster/foto/haircare.jpg',
+    excerpt: 'Dari short bob modern sampai butterfly cut, inspirasi potongan rambut yang sedang tren tahun ini.',
+    category: 'Hair',
+    readTime: '7 menit',
+    date: '1 Jan 2024',
   },
 ]
 
 export default function BlogPage() {
-  return (
-    <main className="min-h-screen bg-background">
-      <Header />
+  const [featured, ...rest] = articles
 
-      {/* Hero Section - More Compact */}
-      <section className="pt-28 pb-16 px-6 lg:px-8 bg-secondary/30 relative">
-        <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20">
-            <Sparkles className="h-3 w-3 text-accent" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-accent">Beauty Insights</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
-            Journal <span className="text-accent italic">Kecantikan</span>
-          </h1>
-          <p className="text-base text-muted-foreground max-w-xl mx-auto">
-            Inspirasi terbaru, tips perawatan, dan tren kecantikan terkini dari tim ahli Imelda Salon.
+  return (
+    <main className="min-h-screen bg-background overflow-hidden">
+      <Header />
+      <PromoMarquee items={['Tips cantik dari Imelda Salon', 'Inspirasi makeup, hairdo & nail art', 'Konsultasi gratis via WhatsApp', 'Ayo datang & tampil cantik untuk dirimu sendiri']} />
+
+      {/* Hero */}
+      <section className="relative px-6 pt-14 pb-12 text-center">
+        <div className="pointer-events-none absolute inset-0 opacity-20 [background-image:radial-gradient(#f4d9da_1.2px,transparent_1.4px)] [background-size:36px_36px]" />
+        <Sprig className="pointer-events-none absolute left-0 top-4 w-28 md:w-44" />
+        <Sprig className="pointer-events-none absolute right-0 top-4 w-28 md:w-44 -scale-x-100" />
+        <div className="relative space-y-3 animate-fade-up-soft">
+          <Bow className="mx-auto w-24" />
+          <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#f4d9da]">Beauty Journal</p>
+          <h1 className="font-script text-6xl md:text-8xl text-accent leading-tight">Jurnal Kecantikan</h1>
+          <Divider />
+          <p className="mx-auto max-w-xl text-muted-foreground leading-relaxed pt-2">
+            Tips perawatan, inspirasi look, dan tren kecantikan terbaru dari Imelda Salon Tarutung.
           </p>
         </div>
       </section>
 
-      {/* Featured Articles - More Proportional */}
-      <section className="py-20 px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article, i) => (
-            <article key={i} className="group space-y-5 animate-fade-up">
-              <Link href={article.slug} className="block relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-xl">
-                <img 
-                  src={article.image} 
-                  alt={article.title} 
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-card/20 backdrop-blur-md border border-white/30 text-white text-[9px] font-bold uppercase tracking-widest">
-                  {article.category}
+      {/* Artikel utama */}
+      <section className="px-6 pb-16">
+        <Link
+          href={featured.slug}
+          className="group relative mx-auto grid max-w-6xl overflow-hidden rounded-[3rem] bg-gradient-to-br from-[#fbe9ea] via-[#f4d9da] to-[#efc9cc] text-[#5a1120] ring-2 ring-accent shadow-2xl shadow-black/40 md:grid-cols-2"
+        >
+          <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[440px] overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={featured.image} alt={featured.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <span className="absolute top-5 left-5 rounded-full bg-[#5a1120] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-[#f4d9da] ring-1 ring-accent">Artikel Pilihan ♥</span>
+          </div>
+          <div className="relative flex flex-col justify-center gap-4 p-8 md:p-12">
+            <Sprig className="pointer-events-none absolute -right-8 -bottom-8 w-36 opacity-70" />
+            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9a6b1e]">
+              {featured.category} · {featured.date} · {featured.readTime}
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight">{featured.title}</h2>
+            <p className="text-[#6b2a37] leading-relaxed">{featured.excerpt}</p>
+            <span className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-[#5a1120] px-7 py-3 text-sm font-bold text-[#faf4eb] transition duration-300 group-hover:scale-105">
+              Baca Selengkapnya <ArrowRight className="h-4 w-4" />
+            </span>
+          </div>
+        </Link>
+      </section>
+
+      {/* Artikel lainnya */}
+      <section className="px-6 pb-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle kicker="Baca Juga" title="Artikel Terbaru" />
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {rest.map((a, i) => (
+              <Link key={a.slug} href={a.slug} className={`group block ${i === 1 ? 'md:mt-10' : ''}`}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-t-full rounded-b-[2rem] ring-4 ring-[#f4d9da]/80 shadow-2xl shadow-black/40">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={a.image} alt={a.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-1000 group-hover:scale-105" />
+                  <span className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#f4d9da] px-4 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#5a1120] ring-1 ring-accent">
+                    {a.category}
+                  </span>
+                </div>
+                <div className="mt-6 space-y-2 text-center">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent">{a.date} · {a.readTime}</p>
+                  <h3 className="font-serif text-xl font-bold leading-snug transition-colors group-hover:text-accent">{a.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground line-clamp-3">{a.excerpt}</p>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-accent">
+                    Baca <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </div>
               </Link>
-
-              <div className="space-y-3 px-2">
-                <div className="flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.2em] text-accent">
-                  <span>{article.date}</span>
-                  <span className="h-1 w-1 rounded-full bg-primary" />
-                  <span>{article.readTime}</span>
-                </div>
-                <h3 className="text-xl font-serif font-bold text-foreground group-hover:text-accent transition-colors leading-tight">
-                  <Link href={article.slug}>{article.title}</Link>
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
-                  {article.excerpt}
-                </p>
-                <Link href={article.slug} className="inline-flex items-center gap-2 text-accent font-bold text-xs group/link">
-                  Baca Selengkapnya
-                  <ChevronRight size={14} className="transition-transform group-hover/link:translate-x-1" />
-                </Link>
-              </div>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="pb-24 px-6">
-        <div className="max-w-7xl mx-auto bg-accent/10 rounded-[3rem] p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
-          <div className="space-y-4 max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">Dapatkan Update <br /><span className="text-accent italic">Tips Kecantikan</span></h2>
-            <p className="text-muted-foreground">Berlangganan buletin kami untuk mendapatkan info promo dan tips eksklusif setiap bulannya.</p>
-          </div>
-          <div className="flex w-full max-w-md gap-4">
-            <input 
-              type="email" 
-              placeholder="Email Anda" 
-              className="flex-1 h-14 px-6 rounded-full bg-card border border-border focus:ring-2 focus:ring-primary outline-none"
-            />
-            <button className="h-14 px-8 rounded-full bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
-              Join
-            </button>
-          </div>
+      {/* CTA konsultasi (menggantikan form newsletter yang tidak terhubung ke mana pun) */}
+      <section className="px-6 pb-28">
+        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[3rem] bg-card p-10 md:p-14 text-center ring-1 ring-accent/50 shadow-2xl shadow-black/40">
+          <Sprig className="pointer-events-none absolute -left-6 -bottom-6 w-36 opacity-80" />
+          <Sprig className="pointer-events-none absolute -right-6 -top-6 w-36 rotate-180 opacity-80" />
+          <Bow className="relative mx-auto w-20" />
+          <h2 className="relative mt-4 font-serif text-3xl md:text-4xl font-bold">Masih bingung pilih look?</h2>
+          <p className="relative font-script text-5xl text-accent">tanya langsung ke Melda</p>
+          <a
+            href={`https://wa.me/6282285310686?text=${encodeURIComponent('Halo Imelda Salon, saya ingin konsultasi look.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-10 py-4 font-bold text-accent-foreground transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#c5a14a80]"
+          >
+            <MessageCircle className="h-5 w-5" /> Konsultasi Gratis
+          </a>
         </div>
       </section>
 

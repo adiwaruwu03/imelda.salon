@@ -32,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://imeldasalon.com/layanan/nail-art-tarutung',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: 'https://imeldasalon.com/layanan/hairdo-wedding-tarutung',
       lastModified: new Date(),
       changeFrequency: 'monthly',

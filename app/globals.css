@@ -29,6 +29,7 @@
   
   --font-sans: var(--font-jakarta), sans-serif;
   --font-serif: var(--font-playfair), serif;
+  --font-script: var(--font-greatvibes), cursive;
 }
 
 .dark {
@@ -77,6 +78,7 @@
 
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
+  --font-script: var(--font-script);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -190,3 +192,6 @@
   .animate-marquee { animation: none; }
   .fade-up, .scale-in, .slide-in-right { opacity: 1; transform: none; transition: none; }
 }
+
+/* Huruf sambung feminin (Great Vibes) */
+.font-script { font-family: var(--font-greatvibes), cursive; font-weight: 400; }
